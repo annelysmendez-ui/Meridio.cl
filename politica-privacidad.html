@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0A2540">
+  <meta name="description" content="Política de Privacidad y Tratamiento de Datos Personales de Meridio SpA, en conformidad con la Ley 21.719 y Ley 19.628.">
+  <meta property="og:title" content="Política de Privacidad — Meridio">
+  <meta property="og:description" content="Política de Tratamiento de Datos Personales y privacidad de Meridio SpA.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CL">
+  <title>Política de Privacidad — Meridio | Tratamiento de Datos Personales</title>
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Hoja de estilos compartida -->
+  <link rel="stylesheet" href="./styles.css">
+
+  <style>
+    /* Estilos específicos para la página legal */
+    .legal-page {
+      padding: 60px 0 80px;
+      background: var(--mist);
+    }
+
+    .legal-container {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .legal-header {
+      background: var(--navy);
+      color: #fff;
+      padding: 50px 40px;
+      border-radius: 14px;
+      margin-bottom: 32px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .legal-header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: .12;
+      background-image: linear-gradient(rgba(255, 255, 255, .08) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .08) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+    }
+
+    .legal-header h1 {
+      color: #fff;
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      margin: 12px 0 16px;
+    }
+
+    .legal-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px 24px;
+      font-size: .78rem;
+      color: #b8c7d3;
+      border-top: 1px solid rgba(255, 255, 255, .15);
+      padding-top: 18px;
+      margin-top: 20px;
+    }
+
+    .legal-meta strong {
+      color: #fff;
+    }
+
+    .legal-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 44px;
+      box-shadow: 0 4px 20px rgba(10, 37, 64, .04);
+    }
+
+    .legal-section {
+      padding-bottom: 28px;
+      margin-bottom: 28px;
+      border-bottom: 1px solid #edf1f4;
+    }
+
+    .legal-section:last-child {
+      padding-bottom: 0;
+      margin-bottom: 0;
+      border-bottom: none;
+    }
+
+    .legal-section h2 {
+      font-size: 1.18rem;
+      color: var(--navy);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+
+    .legal-section h2 span.sec-num {
+      color: var(--teal);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+    }
+
+    .legal-section p {
+      font-size: .88rem;
+      line-height: 1.72;
+      color: #4a5c6d;
+    }
+
+    .legal-section p + p {
+      margin-top: 12px;
+    }
+
+    .legal-highlight-box {
+      background: #f0fdf9;
+      border-left: 3px solid var(--teal);
+      border-radius: 0 8px 8px 0;
+      padding: 14px 18px;
+      margin: 16px 0;
+      font-size: .85rem;
+      color: #245550;
+      line-height: 1.6;
+    }
+
+    .legal-highlight-box a {
+      color: var(--teal);
+      font-weight: 600;
+      text-decoration: underline;
+    }
+
+    .rights-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .right-item {
+      padding: 12px 14px;
+      background: var(--mist);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      font-size: .8rem;
+      color: #3b4e5f;
+    }
+
+    .right-item strong {
+      display: block;
+      color: var(--navy);
+      margin-bottom: 4px;
+      font-size: .84rem;
+    }
+
+    @media (max-width: 760px) {
+      .legal-page { padding: 40px 0 60px; }
+      .legal-header { padding: 32px 22px; }
+      .legal-card { padding: 26px 20px; }
+      .rights-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="./index.html#inicio" aria-label="Meridio, inicio">
+        <img class="brand-logo" src="./assets/logo.png" alt="Meridio" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
+        <span class="brand-text" style="display: none;">Merid<span class="brand-i">i</span>o</span>
+      </a>
+      <nav class="nav" id="mainNav" aria-label="Navegación principal">
+        <div class="nav-dropdown" id="aboutDropdown">
+          <button class="dropdown-trigger" id="dropdownTrigger" type="button" aria-expanded="false" aria-haspopup="true">
+            Quiénes somos
+            <svg class="dropdown-caret" viewBox="0 0 10 6" width="10" height="6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m1 1 4 4 4-4"/>
+            </svg>
+          </button>
+          <div class="dropdown-menu" id="dropdownMenu" role="menu">
+            <a href="./acerca-de.html" role="menuitem">Acerca de Meridio</a>
+            <a href="./politica-privacidad.html" role="menuitem" style="color: var(--teal); font-weight: 700;">Política de privacidad</a>
+          </div>
+        </div>
+        <a href="./index.html#problema">El problema</a>
+        <a href="./index.html#pilares">Qué hacemos</a>
+        <a href="./soluciones.html">Soluciones</a>
+        <a href="./index.html#marcos">Criterios de control</a>
+      </nav>
+      <a class="btn btn-primary header-cta" href="./index.html#contacto">Solicitar Assessment ↗</a>
+      <button class="mobile-menu" id="mobileMenu" type="button" aria-label="Abrir menú" aria-controls="mainNav" aria-expanded="false">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+          <path d="M4 7h16M4 12h16M4 17h16"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- CONTENIDO LEGAL -->
+  <main class="legal-page">
+    <div class="container legal-container">
+      
+      <!-- ENCABEZADO LEGAL -->
+      <div class="legal-header">
+        <div class="eyebrow teal">Tratamiento de Datos Personales</div>
+        <h1>Política de Privacidad</h1>
+        <p style="color: #c4d0da; font-size: .92rem; max-width: 640px;">
+          Gobernanza, transparencia y seguridad en el tratamiento de la información corporativa y personal, en estricta sujeción al marco normativo vigente.
+        </p>
+        <div class="legal-meta">
+          <div>Documento: <strong>MER-LEG-PRI-01</strong></div>
+          <div>Versión: <strong>1.0</strong></div>
+          <div>Última actualización: <strong>Noviembre de 2026</strong></div>
+        </div>
+      </div>
+
+      <!-- CUERPO DE LA POLÍTICA -->
+      <article class="legal-card">
+        
+        <!-- 1. Identificación del Responsable -->
+        <section class="legal-section" id="responsable">
+          <h2><span class="sec-num">1.</span> Identificación del Responsable</h2>
+          <p>
+            El responsable del tratamiento de los datos personales que se recopilan a través de este sitio web es <strong>MERIDIO SpA</strong>, sociedad chilena, RUT <strong>78.550.549-2</strong>, con domicilio en la comuna de Providencia, Región Metropolitana.
+          </p>
+          <p>
+            Para cualquier consulta relacionada con esta política o con el ejercicio de sus derechos, puede contactarnos en: <a href="mailto:privacidad@meridio.cl" style="color: var(--teal); font-weight: 600;">privacidad@meridio.cl</a>.
+          </p>
+          <div class="legal-highlight-box">
+            <strong>Delegado de Protección de Datos (DPO):</strong> Conforme a las exigencias de la Ley 21.719, Meridio designará formalmente un Delegado de Protección de Datos. Mientras se concluye dicha designación formal, la vía oficial de contacto para materias de privacidad es <a href="mailto:privacidad@meridio.cl">privacidad@meridio.cl</a>.
+          </div>
+        </section>
+
+        <!-- 2. Marco Normativo -->
+        <section class="legal-section" id="marco-normativo">
+          <h2><span class="sec-num">2.</span> Marco Normativo</h2>
+          <p>
+            Esta Política se rige por la <strong>Ley N° 21.719</strong>, que regula la protección y el tratamiento de los datos personales y crea la Agencia de Protección de Datos Personales, la cual entrará en vigencia el 1 de diciembre de 2026.
+          </p>
+          <p>
+            Mientras dicha ley no entre en vigor, Meridio aplica voluntaria y proactivamente sus estándares de máxima protección y transparencia, en estricta concordancia con la <strong>Ley N° 19.628</strong> sobre Protección de la Vida Privada.
+          </p>
+        </section>
+
+        <!-- 3. Datos Personales que Recopilamos -->
+        <section class="legal-section" id="datos-recopilados">
+          <h2><span class="sec-num">3.</span> Datos Personales que Recopilamos</h2>
+          <p>
+            Meridio recopila únicamente los datos personales que el titular proporciona voluntariamente al contactarnos por correo electrónico (nombre, correo corporativo y la información que decida incluir en su mensaje).
+          </p>
+          <p>
+            <strong>No recopilamos datos sensibles</strong> según la definición de la Ley 21.719 (salud, biometría, origen étnico, convicciones religiosas o políticas, etc.).
+          </p>
+        </section>
+
+        <!-- 4. Finalidades del Tratamiento -->
+        <section class="legal-section" id="finalidades">
+          <h2><span class="sec-num">4.</span> Finalidades del Tratamiento</h2>
+          <p>
+            Los datos personales proporcionados serán utilizados exclusivamente para gestionar su solicitud de contacto y responder a su solicitud de assessment, diagnóstico o información sobre nuestros servicios.
+          </p>
+          <p>
+            Las finalidades de comunicaciones comerciales y mejora de servicios aplicarán únicamente si el titular otorga su consentimiento expreso e inequívoco en el futuro.
+          </p>
+        </section>
+
+        <!-- 5. Base de Licitud del Tratamiento -->
+        <section class="legal-section" id="base-licitud">
+          <h2><span class="sec-num">5.</span> Base de Licitud del Tratamiento</h2>
+          <p>
+            El tratamiento de sus datos personales se fundamenta en el <strong>consentimiento</strong> del titular al iniciar la comunicación por correo electrónico, en la <strong>ejecución de medidas precontractuales o contractuales</strong>, y en el cumplimiento de las <strong>obligaciones legales</strong> aplicables a Meridio.
+          </p>
+        </section>
+
+        <!-- 6. Conservación de los Datos -->
+        <section class="legal-section" id="conservacion">
+          <h2><span class="sec-num">6.</span> Conservación de los Datos</h2>
+          <p>
+            Meridio conservará sus datos personales únicamente durante el tiempo estrictamente necesario para cumplir con las finalidades para las cuales fueron recopilados:
+          </p>
+          <div class="rights-grid">
+            <div class="right-item">
+              <strong>Datos de contacto y solicitudes</strong>
+              Hasta 12 meses después de la última interacción.
+            </div>
+            <div class="right-item">
+              <strong>Datos contractuales y facturación</strong>
+              Por el plazo que exija la legislación tributaria y comercial chilena (mínimo 6 años).
+            </div>
+            <div class="right-item" style="grid-column: 1 / -1;">
+              <strong>Comunicaciones comerciales</strong>
+              Hasta que usted revoque expresamente su consentimiento.
+            </div>
+          </div>
+        </section>
+
+        <!-- 7. Destinatarios y Transferencias -->
+        <section class="legal-section" id="destinatarios">
+          <h2><span class="sec-num">7.</span> Destinatarios y Transferencias</h2>
+          <p>
+            Meridio <strong>no vende, alquila ni cede</strong> sus datos personales a terceros con fines comerciales.
+          </p>
+          <p>
+            Sus datos podrán ser comunicados únicamente a proveedores de servicios tecnológicos que actúan en calidad de encargados del tratamiento bajo rigurosos acuerdos de confidencialidad y estándares de seguridad, así como a las autoridades competentes en cumplimiento de un mandato legal formal.
+          </p>
+        </section>
+
+        <!-- 8. Derechos del Titular -->
+        <section class="legal-section" id="derechos">
+          <h2><span class="sec-num">8.</span> Derechos del Titular</h2>
+          <p>
+            De acuerdo con la Ley 21.719, usted goza de plenos derechos sobre su información personal:
+          </p>
+          <div class="rights-grid">
+            <div class="right-item">
+              <strong>Acceso y Rectificación</strong>
+              Conocer sus datos tratados y solicitar la corrección de información inexacta o incompleta.
+            </div>
+            <div class="right-item">
+              <strong>Supresión (Cancelación)</strong>
+              Solicitar la eliminación de sus datos cuando ya no sean requeridos para los fines informados.
+            </div>
+            <div class="right-item">
+              <strong>Oposición y Limitación</strong>
+              Oponerse al tratamiento por motivos legítimos o solicitar la limitación del mismo.
+            </div>
+            <div class="right-item">
+              <strong>Portabilidad y Bloqueo</strong>
+              Obtener sus datos en formato estructurado o solicitar el bloqueo temporal de su tratamiento.
+            </div>
+          </div>
+          <p style="margin-top: 14px;">
+            Para ejercer cualquiera de estos derechos, puede remitir una solicitud escrita a <a href="mailto:privacidad@meridio.cl" style="color: var(--teal); font-weight: 600;">privacidad@meridio.cl</a>. Meridio responderá en un plazo máximo de <strong>10 días hábiles</strong>.
+          </p>
+        </section>
+
+        <!-- 9. Seguridad de los Datos -->
+        <section class="legal-section" id="seguridad">
+          <h2><span class="sec-num">9.</span> Seguridad de los Datos</h2>
+          <p>
+            Meridio adopta medidas técnicas y organizativas de estándar corporativo para garantizar la integridad, confidencialidad y disponibilidad de la información:
+          </p>
+          <ul class="check-list" style="margin-top: 12px;">
+            <li><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg><span style="color: #4a5c6d;">Cifrado en tránsito mediante protocolos seguros HTTPS / TLS.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg><span style="color: #4a5c6d;">Políticas de privilegio mínimo y control de acceso estricto a los sistemas.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg><span style="color: #4a5c6d;">Monitoreo continuo y protocolos formales de respuesta ante incidentes de ciberseguridad.</span></li>
+          </ul>
+        </section>
+
+        <!-- 10. Cookies y Tecnologías Similares -->
+        <section class="legal-section" id="cookies">
+          <h2><span class="sec-num">10.</span> Cookies y Tecnologías Similares</h2>
+          <p>
+            Nuestro sitio web utiliza únicamente cookies técnicas estrictamente necesarias para su operatividad básica y seguridad. No empleamos cookies de perfilamiento publicitario ni rastreadores de terceros sin su consentimiento explícito previo.
+          </p>
+        </section>
+
+        <!-- 11. Menores de Edad -->
+        <section class="legal-section" id="menores">
+          <h2><span class="sec-num">11.</span> Menores de Edad</h2>
+          <p>
+            Los servicios y contenidos de Meridio están orientados a organizaciones empresariales y profesionales. No recopilamos intencionalmente información perteneciente a menores de 18 años.
+          </p>
+        </section>
+
+        <!-- 12. Cambios a esta Política -->
+        <section class="legal-section" id="cambios">
+          <h2><span class="sec-num">12.</span> Cambios a esta Política</h2>
+          <p>
+            Meridio se reserva el derecho de actualizar esta Política de Privacidad conforme surjan modificaciones regulatorias o técnicas. Cualquier cambio sustancial será notificado oportunamente a través de esta misma plataforma.
+          </p>
+        </section>
+
+        <!-- 13. Reclamaciones -->
+        <section class="legal-section" id="reclamaciones">
+          <h2><span class="sec-num">13.</span> Reclamaciones</h2>
+          <p>
+            Si considera que sus derechos han sido vulnerados, tiene la facultad de acudir a la <strong>Agencia de Protección de Datos Personales</strong> (una vez constituida conforme a la Ley 21.719) o ante los tribunales de justicia competentes en Chile.
+          </p>
+          <p>
+            Asimismo, ponemos a su disposición nuestro canal directo para atender y resolver cualquier inquietud de forma inmediata: <a href="mailto:privacidad@meridio.cl" style="color: var(--teal); font-weight: 600;">privacidad@meridio.cl</a>.
+          </p>
+        </section>
+
+      </article>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="brand" href="./index.html#inicio" aria-label="Meridio, inicio">
+            <img class="brand-logo footer-logo" src="./assets/logo.png" alt="Meridio" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
+            <span class="brand-text" style="display: none; color: #fff;">Merid<span class="brand-i">i</span>o</span>
+          </a>
+          <p>Un solo responsable para orquestar tecnología, seguridad y cumplimiento en sectores de alta criticidad.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Soluciones</h4>
+          <a href="./soluciones.html#ciberseguridad-zero-trust">Ciberseguridad y Zero Trust</a>
+          <a href="./soluciones.html#infraestructura-cloud">Infraestructura Cloud</a>
+          <a href="./soluciones.html#continuidad-respaldo">Continuidad y Respaldo</a>
+          <a href="./soluciones.html#compliance">Compliance Normativo</a>
+        </div>
+        <div class="footer-col">
+          <h4>Ecosistema</h4>
+          <a href="./soluciones.html">Modelo de servicio</a>
+          <a href="./soluciones.html">Gobernanza y SLA</a>
+          <a href="./index.html#contacto">Cobertura regional</a>
+        </div>
+        <div class="footer-col">
+          <h4>Marco Legal</h4>
+          <a href="./index.html#marcos">Ley 21.719 (Datos)</a>
+          <a href="./index.html#marcos">Ley 21.663 (Ciberseguridad)</a>
+          <a href="./politica-privacidad.html">Política de Privacidad (MER-LEG-PRI-01 v1.0)</a>
+        </div>
+        <div class="footer-col">
+          <h4>Compañía</h4>
+          <span class="footer-info">Santiago de Chile, operación continua</span>
+          <a href="mailto:Contacto@meridio.cl" class="footer-contact-link">contacto@meridio.cl</a>
+          <a href="tel:+569 5115 9279" class="footer-contact-link">+56 9 5115 9279</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> Meridio SpA. Todos los derechos reservados.</span>
+        <span>Gobernanza tecnológica y de ciberseguridad con responsabilidad | Chile | MER-LEG-PRI-01 v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,1068 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0A2540">
+  <meta name="description" content="Catálogo Extendido de Servicios y Capacidades de Meridio: Modernización, Ciberseguridad, Cumplimiento y Operación Continua.">
+  <meta property="og:title" content="Catálogo Extendido de Servicios y Capacidades — Meridio">
+  <meta property="og:description" content="Consulte el alcance técnico, los entregables auditables y los marcos de cumplimiento normativo bajo responsabilidad única.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CL">
+  <title>Catálogo Extendido de Servicios y Capacidades — Meridio</title>
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Hoja de estilos compartida -->
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="./index.html#inicio" aria-label="Meridio, volver al inicio">
+        <img class="brand-logo" src="./assets/logo.png" alt="Meridio" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
+        <span class="brand-text" style="display: none;">Merid<span class="brand-i">i</span>o</span>
+      </a>
+      <nav class="nav" id="mainNav" aria-label="Navegación principal">
+        <div class="nav-dropdown" id="aboutDropdown">
+          <button class="dropdown-trigger" id="dropdownTrigger" type="button" aria-expanded="false" aria-haspopup="true">
+            Quiénes somos
+            <svg class="dropdown-caret" viewBox="0 0 10 6" width="10" height="6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m1 1 4 4 4-4"/>
+            </svg>
+          </button>
+          <div class="dropdown-menu" id="dropdownMenu" role="menu">
+            <a href="./acerca-de.html" role="menuitem">Acerca de Meridio</a>
+            <a href="./politica-privacidad.html" role="menuitem">Política de privacidad</a>
+          </div>
+        </div>
+        <a href="./index.html#problema">El problema</a>
+        <a href="./index.html#metodo">Qué hacemos</a>
+        <a href="./soluciones.html" style="color: var(--teal); font-weight: 700;">Soluciones</a>
+        <a href="./index.html#marcos">Criterios de control</a>
+      </nav>
+      <a class="btn btn-primary header-cta" href="./index.html#contacto">Solicitar Assessment ↗</a>
+      <button class="mobile-menu" id="mobileMenu" type="button" aria-label="Abrir menú" aria-controls="mainNav" aria-expanded="false">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+          <path d="M4 7h16M4 12h16M4 17h16"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO DE SOLUCIONES SEGÚN CAPTURA DE REFERENCIA -->
+    <section class="catalog-hero" id="soluciones-hero">
+      <div class="container">
+        <div class="catalog-hero-head">
+          <div class="eyebrow teal">Arquitectura de Servicios Enterprise</div>
+          <h1>Catálogo Extendido de Servicios y Capacidades</h1>
+          <p class="catalog-hero-desc">Consulte el alcance técnico, los entregables auditables y los marcos de cumplimiento normativo de cada una de nuestras soluciones bajo el modelo de interlocución y responsabilidad única[cite: 29].</p>
+        </div>
+
+        <!-- BARRA INTEGRADA DE PESTAÑAS Y BUSCADOR -->
+        <div class="catalog-controls">
+          <div class="catalog-tabs" role="tablist" aria-label="Filtrar por pilar">
+            <button type="button" class="catalog-tab active" data-pillar="all" role="tab" aria-selected="true">Todos</button>
+            <button type="button" class="catalog-tab" data-pillar="1" role="tab" aria-selected="false">1. Modernización</button>
+            <button type="button" class="catalog-tab" data-pillar="2" role="tab" aria-selected="false">2. Ciberseguridad</button>
+            <button type="button" class="catalog-tab" data-pillar="3" role="tab" aria-selected="false">3. Cumplimiento</button>
+            <button type="button" class="catalog-tab" data-pillar="4" role="tab" aria-selected="false">4. Operación</button>
+          </div>
+
+          <div class="catalog-search-wrapper">
+            <input type="text" id="catalogSearchInput" class="catalog-search-input" placeholder="Buscar servicio, tecnología o ley..." aria-label="Buscar soluciones técnicas">
+            <svg class="catalog-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CUADRÍCULA DE FICHAS EJECUTIVAS -->
+    <section class="catalog-main-section">
+      <div class="container">
+        <div class="catalog-results-info">
+          <span>Mostrando <strong id="resultsCount">14 soluciones disponibles</strong></span>
+          <span style="font-size: .75rem; color: #8da0ae;">Haga clic en «Ver ficha completa» para expandir el alcance técnico</span>
+        </div>
+
+        <div class="solution-grid" id="solutionsCatalogGrid">
+
+          <!-- ================= PILAR 1: MODERNIZACIÓN ================= -->
+
+          <!-- 1.1 M365 (Ficha idéntica a captura) -->
+          <article class="card solution-card" data-pilar="1">
+            <div class="solution-card-header">
+              <span class="solution-pilar">PILAR 1</span>
+              <span class="solution-badge">Productividad & Colaboración</span>
+            </div>
+            <h3 class="solution-card-title">Productividad Empresarial & Modernización Microsoft 365 (M365 / Entra ID)</h3>
+            <p class="solution-card-desc">Consolidar un entorno de colaboración y trabajo moderno seguro, rentable y sin interrupciones, optimizando el licenciamiento corporativo y la gobernanza de identidad[cite: 19, 20].</p>
+            <div class="solution-caps-header">
+              <span class="caps-label">Capacidades Principales</span>
+              <span class="caps-count">3 de 4 puntos</span>
+            </div>
+            <ul class="solution-caps-list">
+              <li>Migración planificada de mensajería, archivos y colaboración (Exchange, SharePoint, Teams, OneDrive) sin pérdida operacional[cite: 19, 20].</li>
+              <li>Gobierno de identidad unificado con Microsoft Entra ID y directivas de control de acceso corporativo[cite: 19, 20].</li>
+              <li>Auditoría técnica y optimización de licenciamiento M365 (Business Premium, E3, E5) eliminando costos redundantes[cite: 19, 20].</li>
+            </ul>
+            <div class="solution-card-meta">
+              <span class="meta-normativa"><strong>Normativa:</strong> CIS Microsoft 365 Benchmark · ISO/IEC 27001 (A.12)[cite: 19, 20]</span>
+              <span class="meta-modalidad">Modalidad consultiva[cite: 19]</span>
+            </div>
+            <div class="solution-card-actions">
+              <button type="button" class="btn-ficha-trigger" data-target="ficha-m365">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7Z"/></svg>
+                Ver ficha completa[cite: 19]
+              </button>
+              <a href="./index.html#contacto" class="btn-explorar">EXPLORAR EN DIAGNÓSTICO ↗[cite: 19]</a>
+            </div>
+          </article>
+
+          <!-- 1.2 Multi-Cloud (Ficha idéntica a captura) -->
+          <article class="card solution-card" data-pilar="1">
+            <div class="solution-card-header">
+              <span class="solution-pilar">PILAR 1</span>
+              <span class="solution-badge">Multi-Cloud Enterprise</span>
+            </div>
+            <h3 class="solution-card-title">Migración e Infraestructura Multi-Cloud (Azure · AWS · Google Cloud)</h3>
+            <p class="solution-card-desc">Migración planificada y adopción multinube sin interrupción del negocio. Eliminamos la dependencia de un solo proveedor y diseñamos arquitecturas resilientes que optimizan rendimiento, disponibilidad y gobierno técnico[cite: 19].</p>
+            <div class="solution-caps-header">
+              <span class="caps-label">Capacidades Principales</span>
+              <span class="caps-count">3 de 4 puntos</span>
+            </div>
+            <ul class="solution-caps-list">
+              <li>Evaluación de viabilidad, dependencias y dimensionamiento de cargas de trabajo (Cloud Readiness Assessment)[cite: 19].</li>
+              <li>Estrategias de migración estructuradas bajo el marco de las 6Rs (Rehost, Replatform, Refactor, Repurchase, Retire, Retain)[cite: 19].</li>
+              <li>Despliegue de zonas de aterrizaje empresariales (Enterprise Cloud Landing Zones) con políticas de seguridad y gobierno preconfiguradas[cite: 19].</li>
+            </ul>
+            <div class="solution-card-meta">
+              <span class="meta-normativa"><strong>Normativa:</strong> ISO/IEC 27001 (A.12) · CIS Controls v8 (Control 12)[cite: 19]</span>
+              <span class="meta-modalidad">Modalidad consultiva[cite: 19]</span>
+            </div>
+            <div class="solution-card-actions">
+              <button type="button" class="btn-ficha-trigger" data-target="ficha-multicloud">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7Z"/></svg>
+                Ver ficha completa[cite: 19]
+              </button>
+              <a href="./index.html#contacto" class="btn-explorar">EXPLORAR EN DIAGNÓSTICO ↗[cite: 19]</a>
+            </div>
+          </article>
+
+          <!-- 1.3 Virtualización -->
+          <article class="card solution-card" data-pilar="1">
+            <div class="solution-card-header">
+              <span class="solution-pilar">PILAR 1</span>
+              <span class="solution-badge">Virtualización Crítica</span>
+            </div>
+            <h3 class="solution-card-title">Infraestructura Híbrida y Virtualización (VMware / Proxmox / Data Center)</h3>
+            <p class="solution-card-desc">Operación y consolidación de plataformas de virtualización empresarial con continuidad garantizada, migración controlada de hipervisores y soporte nivel L3.</p>
+            <div class="solution-caps-header">
+              <span class="caps-label">Capacidades Principales</span>
+              <span class="caps-count">3 de 4 puntos</span>
+            </div>
+            <ul class="solution-caps-list">
+              <li>Hardening de clústeres de cómputo, almacenamiento distribuido y segmentación de redes internas.</li>
+              <li>Planes de transición y migración de VMware hacia alternativas de código abierto o nubes públicas.</li>
+              <li>Monitoreo de rendimiento, capacidad y salud física y lógica 24/7 de hosts y almacenamiento SAN/NAS.</li>
+            </ul>
+            <div class="solution-card-meta">
+              <span class="meta-normativa"><strong>Normativa:</strong> ISO 27001 · CIS Benchmarks</span>
+              <span class="meta-modalidad">Operación gestionada</span>
+            </div>
+            <div class="solution-card-actions">
+              <button type="button" class="btn-ficha-trigger" data-target="ficha-virtualizacion">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7Z"/></svg>
+                Ver ficha completa
+              </button>
+              <a href="./index.html#contacto" class="btn-explorar">EXPLORAR EN DIAGNÓSTICO ↗</a>
+            </div>
+          </article>
+
+          <!-- 1.4 FinOps -->
+          <article class="card solution-card" data-pilar="1">
+            <div class="solution-card-header">
+              <span class="solution-pilar">PILAR 1</span>
+              <span class="solution-badge">Optimización Financiera</span>
+            </div>
+            <h3 class="solution-card-title">FinOps y Gobernanza del Gasto Tecnológico Cloud</h3>
+            <p class="solution-card-desc">Visibilidad en tiempo real del gasto tecnológico, erradicación de recursos ociosos y disciplina presupuestaria sin arriesgar la disponibilidad operativa.</p>
+            <div class="solution-caps-header">
+              <span class="caps-label">Capacidades Principales</span>
+              <span class="caps-count">3 de 4 puntos</span>
+            </div>
+            <ul class="solution-caps-list">
+              <li>Auditoría continua de recursos no aprovisionados, snapshots huérfanos y cómputo subutilizado.</li>
+              <li>Estrategias de reservas y planes de ahorro plurianuales calibrados a la demanda real.</li>
+              <li>Reportabilidad ejecutiva mensual desglosada por unidad de negocio o centro de costos.</li>
+            </ul>
+            <div class="solution-card-meta">
+              <span class="meta-normativa"><strong>Normativa:</strong> FinOps Foundation Framework</span>
+              <span class="meta-modalidad">Consultiva continua</span>
+            </div>
+            <div class="solution-card-actions">
+              <button type="button" class="btn-ficha-trigger" data-target="ficha-finops">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7Z"/></svg>
+                Ver ficha completa
+              </button>
+              <a href="./index.html#contacto" class="btn-explorar">EXPLORAR EN DIAGNÓSTICO ↗</a>
+            </div>
+          </article>
+
+          <!-- ================= PILAR 2: CIBERSEGURIDAD ================= -->
+
+          <!-- 2.1 IAM -->
+          <article class="card solution-card" data-pilar="2">
+            <div class="solution-card-header">
+              <span class="solution-pilar">PILAR 2</span>
+              <span class="solution-badge">Identidad & Acceso</span>
+            </div>
+            <h3 class="solution-card-title">Gobernanza de Identidad (IAM) y Acceso Condicional Adaptativo</h3>
+            <p class="solution-card-desc">Autenticación multifactor contextual (MFA), esquemas de privilegio mínimo Just-In-Time y evaluación continua de riesgo basada en identidad y dispositivo.</p>
+            <div class="solution-caps-header">
+              <span class="caps-label">Capacidades Principales</span>
+              <span class="caps-count">3 de 4 puntos</span>
+            </div>
+            <ul class="solution-caps-list">
+              <li>Directivas de acceso contextual y mitigación automática de inicios de sesión anómalos.</li>
+              <li>Gestión de identidades con privilegios elevados (PIM / PAM) con aprobación formal y auditoría.</li>
+              <li>Hardening de autenticación y erradicación definitiva de protocolos heredados vulnerables.</li>
+            </ul>
+            <div class="solution-card-meta">
+              <span class="meta-normativa"><strong>Normativa:</strong> NIST SP 800-207 · CIS Controls v8 (C.05, C.06)</span>
+              <span class="meta-modalidad">Modalidad consultiva</span>
+            </div>
+            <div class="solution-card-actions">
+              <button type="button" class="btn-ficha-trigger" data-target="ficha-iam">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7Z"/></svg>
+                Ver ficha completa
+              </button>
+              <a href="./index.html#contacto" class="btn-explorar">EXPLORAR EN DIAGNÓSTICO ↗</a>
+            </div>
+          </article>
+
+          <!-- 2.2 EDR -->
+          <article class="card solution-card" data-pilar="2">
+            <div class="solution-card-header">
+              <span class="solution-pilar">PILAR 2</span>
+              <span class="solution-badge">Protección de Activos</span>
+            </div>
+            <h3 class="solution-card-title">Defensa Avanzada de Endpoints (EDR / XDR Enterprise)</h3>
+            <p class="solution-card-desc">Supervisión en tiempo real, detección heurística de amenazas y aislamiento automatizado en puestos de trabajo y servidores frente a ransomware dirigido.</p>
+            <div class="solution-caps-header">
+              <span class="caps-label">Capacidades Principales</span>
+              <span class="caps-count">3 de 4 puntos</span>
+            </div>
+            <ul class="solution-caps-list">
+              <li>Detección y respuesta proactiva con telemetría integrada en estaciones de trabajo y servidores.</li>
+              <li>Aislamiento automatizado de máquinas comprometidas para evitar movimientos laterales.</li>
+              <li>Evaluación continua de vulnerabilidades de software y control de aplicaciones no autorizadas.</li>
+            </ul>
+            <div class="solution-card-meta">
+              <span class="meta-normativa"><strong>Normativa:</strong> CIS Controls v8 (Control 10) · Ley 21.663</span>
+              <span class="meta-modalidad">Modalidad gestionada</span>
+            </div>
+            <div class="solution-card-actions">
+              <button type="button" class="btn-ficha-trigger" data-target="ficha-edr">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7Z"/></svg>
+                Ver ficha completa
+              </button>
+              <a href="./index.html#contacto" class="btn-explorar">EXPLORAR EN DIAGNÓSTICO ↗</a>
+            </div>
+          </article>
+
+          <!-- 2.3 Inmutabilidad Anti-Ransomware -->
+          <article class="card solution-card" data-pilar="2">
+            <div class="solution-card-header">
+              <span class="solution-pilar">PILAR 2</span>
+              <span class="solution-badge">Anti-Ransomware</span>
+            </div>
+            <h3 class="solution-card-title">Inmutabilidad de Respaldos (Anti-Ransomware WORM / Air-Gap)</h3>
+            <p class="solution-card-desc">Almacenamiento blindado con política WORM (Write Once, Read Many) y aislamiento que impide el borrado o alteración de copias maestras.</p>
+            <div class="solution-caps-header">
+              <span class="caps-label">Capacidades Principales</span>
+              <span class="caps-count">3 de 4 puntos</span>
+            </div>
+            <ul class="solution-caps-list">
+              <li>Bloqueo inmutable en repositorios de almacenamiento que resiste credenciales directivas comprometidas.</li>
+              <li>Aislamiento lógico y físico (air-gap) entre la red productiva y la infraestructura de backup.</li>
+              <li>Escaneo automatizado de malware y malware latente sobre las copias antes de su restauración.</li>
+            </ul>
+            <div class="solution-card-meta">
+              <span class="meta-normativa"><strong>Normativa:</strong> CIS Controls v8 (Control 11) · NIST CSF</span>
+              <span class="meta-modalidad">Blindaje técnico</span>
+            </div>
+            <div class="solution-card-actions">
+              <button type="button" class="btn-ficha-trigger" data-target="ficha-inmutabilidad">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7Z"/></svg>
+                Ver ficha completa
+              </button>
+              <a href="./index.html#contacto" class="btn-explorar">EXPLORAR EN DIAGNÓSTICO ↗</a>
+            </div>
+          </article>
+
+          <!-- 2.4 CISO as a Service -->
+          <article class="card solution-card" data-pilar="2">
+            <div class="solution-card-header">
+              <span class="solution-pilar">PILAR 2</span>
+              <span class="solution-badge">Gobierno Ejecutivo</span>
+            </div>
+            <h3 class="solution-card-title">Liderazgo Estratégico: CISO as a Service (CISOaaS)</h3>
+            <p class="solution-card-desc">Dirección de seguridad informática ejecutiva, alineación con comités de directores y gestión de riesgos sin sobrecargar la estructura de costos fijos.</p>
+            <div class="solution-caps-header">
+              <span class="caps-label">Capacidades Principales</span>
+              <span class="caps-count">3 de 4 puntos</span>
+            </div>
+            <ul class="solution-caps-list">
+              <li>Definición y actualización permanente de la política corporativa de seguridad y apetito de riesgo.</li>
+              <li>Representación técnica formal ante auditores externos, reguladores y comités de riesgo.</li>
+              <li>Diseño de hojas de ruta de remediación priorizadas en base a impacto de negocio cuantificable.</li>
+            </ul>
+            <div class="solution-card-meta">
+              <span class="meta-normativa"><strong>Normativa:</strong> ISO/IEC 27001 · Ley 21.663</span>
+              <span class="meta-modalidad">Consultiva directiva</span>
+            </div>
+            <div class="solution-card-actions">
+              <button type="button" class="btn-ficha-trigger" data-target="ficha-ciso">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7Z"/></svg>
+                Ver ficha completa
+              </button>
+              <a href="./index.html#contacto" class="btn-explorar">EXPLORAR EN DIAGNÓSTICO ↗</a>
+            </div>
+          </article>
+
+          <!-- ================= PILAR 3: CUMPLIMIENTO ================= -->
+
+          <!-- 3.1 Ley 21.719 -->
+          <article class="card solution-card" data-pilar="3">
+            <div class="solution-card-header">
+              <span class="solution-pilar">PILAR 3</span>
+              <span class="solution-badge">Protección de Datos</span>
+            </div>
+            <h3 class="solution-card-title">Cumplimiento y Adecuación a la Ley de Datos Personales (Ley 21.719)</h3>
+            <p class="solution-card-desc">Implementación del principio de responsabilidad proactiva, Registro de Actividades de Tratamiento (RAT) y mecanismos de atención inmediata a derechos ARCO.</p>
+            <div class="solution-caps-header">
+              <span class="caps-label">Capacidades Principales</span>
+              <span class="caps-count">3 de 4 puntos</span>
+            </div>
+            <ul class="solution-caps-list">
+              <li>Inventario y mapeo de datos personales con clasificación automática de información confidencial.</li>
+              <li>Estructuración de políticas de retención, supresión segura y canales para el ejercicio de derechos.</li>
+              <li>Alineación con el estándar Purview / DLP y designación de Delegado de Protección de Datos (DPOaaS).</li>
+            </ul>
+            <div class="solution-card-meta">
+              <span class="meta-normativa"><strong>Normativa:</strong> Ley N° 21.719 · Ley N° 19.628 · RGPD</span>
+              <span class="meta-modalidad">Legal & Técnica</span>
+            </div>
+            <div class="solution-card-actions">
+              <button type="button" class="btn-ficha-trigger" data-target="ficha-ley21719">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7Z"/></svg>
+                Ver ficha completa
+              </button>
+              <a href="./index.html#contacto" class="btn-explorar">EXPLORAR EN DIAGNÓSTICO ↗</a>
+            </div>
+          </article>
+
+          <!-- 3.2 Ley 21.663 -->
+          <article class="card solution-card" data-pilar="3">
+            <div class="solution-card-header">
+              <span class="solution-pilar">PILAR 3</span>
+              <span class="solution-badge">Ciberseguridad Nacional</span>
+            </div>
+            <h3 class="solution-card-title">Cumplimiento de la Ley Marco de Ciberseguridad (Ley 21.663 / ANCI)</h3>
+            <p class="solution-card-desc">Adecuación de infraestructura para Operadores de Importancia Vital y Servicios Esenciales, con protocolo mandatorio de reporte de incidentes en 3 horas.</p>
+            <div class="solution-caps-header">
+              <span class="caps-label">Capacidades Principales</span>
+              <span class="caps-count">3 de 4 puntos</span>
+            </div>
+            <ul class="solution-caps-list">
+              <li>Diagnóstico de madurez técnica frente a los requerimientos normativos dictados por la ANCI.</li>
+              <li>Procedimiento formal de triaje, contención y notificación de incidentes graves en plazos legales.</li>
+              <li>Auditorías periódicas de resiliencia y pruebas de penetración (ethical hacking) documentadas.</li>
+            </ul>
+            <div class="solution-card-meta">
+              <span class="meta-normativa"><strong>Normativa:</strong> Ley N° 21.663 · ANCI · CSIRT Nacional</span>
+              <span class="meta-modalidad">Auditable directiva</span>
+            </div>
+            <div class="solution-card-actions">
+              <button type="button" class="btn-ficha-trigger" data-target="ficha-ley21663">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7Z"/></svg>
+                Ver ficha completa
+              </button>
+              <a href="./index.html#contacto" class="btn-explorar">EXPLORAR EN DIAGNÓSTICO ↗</a>
+            </div>
+          </article>
+
+          <!-- ================= PILAR 4: OPERACIÓN ================= -->
+
+          <!-- 4.1 SOC 24/7 -->
+          <article class="card solution-card" data-pilar="4">
+            <div class="solution-card-header">
+              <span class="solution-pilar">PILAR 4</span>
+              <span class="solution-badge">SOC & Detección</span>
+            </div>
+            <h3 class="solution-card-title">Gestión Unificada SIEM, SOAR y Monitoreo SOC 24/7</h3>
+            <p class="solution-card-desc">Correlación analítica de eventos de seguridad en tiempo real y respuesta coordinada ante incidentes con cobertura permanente los 365 días del año.</p>
+            <div class="solution-caps-header">
+              <span class="caps-label">Capacidades Principales</span>
+              <span class="caps-count">3 de 4 puntos</span>
+            </div>
+            <ul class="solution-caps-list">
+              <li>Ingesta centralizada de logs provenientes de infraestructura nube, redes y puestos de trabajo.</li>
+              <li>Playbooks automatizados de contención que reducen el tiempo medio de respuesta (MTTR).</li>
+              <li>Soporte de triaje e investigación forense por analistas certificados de nivel L2/L3.</li>
+            </ul>
+            <div class="solution-card-meta">
+              <span class="meta-normativa"><strong>Normativa:</strong> ISO/IEC 27001 (A.16) · ANCI Ley 21.663</span>
+              <span class="meta-modalidad">Operación continua</span>
+            </div>
+            <div class="solution-card-actions">
+              <button type="button" class="btn-ficha-trigger" data-target="ficha-soc">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7Z"/></svg>
+                Ver ficha completa
+              </button>
+              <a href="./index.html#contacto" class="btn-explorar">EXPLORAR EN DIAGNÓSTICO ↗</a>
+            </div>
+          </article>
+
+          <!-- 4.2 Respaldo Corporativo -->
+          <article class="card solution-card" data-pilar="4">
+            <div class="solution-card-header">
+              <span class="solution-pilar">PILAR 4</span>
+              <span class="solution-badge">Respaldo Integral</span>
+            </div>
+            <h3 class="solution-card-title">Sistemas de Copias de Seguridad Corporativas (SaaS & Datacenter)</h3>
+            <p class="solution-card-desc">Políticas centralizadas de respaldo automatizado para cargas de trabajo críticas, bases de datos transaccionales y entornos de colaboración M365.</p>
+            <div class="solution-caps-header">
+              <span class="caps-label">Capacidades Principales</span>
+              <span class="caps-count">3 de 4 puntos</span>
+            </div>
+            <ul class="solution-caps-list">
+              <li>Respaldo automatizado de buzones, SharePoint y OneDrive independiente del proveedor cloud.</li>
+              <li>Políticas de retención y ciclo de vida de almacenamiento conformes con obligaciones legales.</li>
+              <li>Cifrado militar en tránsito y reposo con administración protegida de llaves criptográficas.</li>
+            </ul>
+            <div class="solution-card-meta">
+              <span class="meta-normativa"><strong>Normativa:</strong> ISO/IEC 27001 (A.12.3) · Ley 21.719</span>
+              <span class="meta-modalidad">Operación gestionada</span>
+            </div>
+            <div class="solution-card-actions">
+              <button type="button" class="btn-ficha-trigger" data-target="ficha-respaldo">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7Z"/></svg>
+                Ver ficha completa
+              </button>
+              <a href="./index.html#contacto" class="btn-explorar">EXPLORAR EN DIAGNÓSTICO ↗</a>
+            </div>
+          </article>
+
+          <!-- 4.3 DRaaS -->
+          <article class="card solution-card" data-pilar="4">
+            <div class="solution-card-header">
+              <span class="solution-pilar">PILAR 4</span>
+              <span class="solution-badge">Disaster Recovery</span>
+            </div>
+            <h3 class="solution-card-title">Recuperación ante Desastres como Servicio (DRaaS y Conmutación)</h3>
+            <p class="solution-card-desc">Sitios secundarios listos para failover en caliente, orquestación automatizada de arranque y pruebas periódicas que validan la continuidad real.</p>
+            <div class="solution-caps-header">
+              <span class="caps-label">Capacidades Principales</span>
+              <span class="caps-count">3 de 4 puntos</span>
+            </div>
+            <ul class="solution-caps-list">
+              <li>Replicación asíncrona o continua de máquinas virtuales críticas hacia una zona secundaria.</li>
+              <li>Orquestación con un solo clic para failover integral y failback transparente sin pérdidas.</li>
+              <li>Simulacros periódicos documentados con actas de prueba auditables ante comités de riesgo.</li>
+            </ul>
+            <div class="solution-card-meta">
+              <span class="meta-normativa"><strong>Normativa:</strong> ISO 22301 · Ley 21.663</span>
+              <span class="meta-modalidad">Servicio gestionado</span>
+            </div>
+            <div class="solution-card-actions">
+              <button type="button" class="btn-ficha-trigger" data-target="ficha-draas">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7Z"/></svg>
+                Ver ficha completa
+              </button>
+              <a href="./index.html#contacto" class="btn-explorar">EXPLORAR EN DIAGNÓSTICO ↗</a>
+            </div>
+          </article>
+
+          <!-- 4.4 RTO/RPO -->
+          <article class="card solution-card" data-pilar="4">
+            <div class="solution-card-header">
+              <span class="solution-pilar">PILAR 4</span>
+              <span class="solution-badge">SLA Vinculante</span>
+            </div>
+            <h3 class="solution-card-title">Garantía Contractual de Tiempos de Caída y Pérdida (RTO / RPO)</h3>
+            <p class="solution-card-desc">Compromiso legal formal sobre tiempos máximos de restablecimiento y umbrales de pérdida de datos calibrados al apetito de riesgo corporativo.</p>
+            <div class="solution-caps-header">
+              <span class="caps-label">Capacidades Principales</span>
+              <span class="caps-count">3 de 4 puntos</span>
+            </div>
+            <ul class="solution-caps-list">
+              <li>Determinación técnica precisa de ventanas de pérdida tolerable (RPO &lt; 15 min / 1 hora).</li>
+              <li>Tiempos máximos de disponibilidad y respuesta garantizados bajo contrato formal de gobierno.</li>
+              <li>Reportabilidad directiva de cumplimiento continuo de acuerdos de nivel de servicio (SLA).</li>
+            </ul>
+            <div class="solution-card-meta">
+              <span class="meta-normativa"><strong>Normativa:</strong> ITIL 4 · SLA Corporativo</span>
+              <span class="meta-modalidad">Gobernanza contractual</span>
+            </div>
+            <div class="solution-card-actions">
+              <button type="button" class="btn-ficha-trigger" data-target="ficha-rto">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7Z"/></svg>
+                Ver ficha completa
+              </button>
+              <a href="./index.html#contacto" class="btn-explorar">EXPLORAR EN DIAGNÓSTICO ↗</a>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- ESTADO VACÍO (CUANDO NO HAY RESULTADOS DE BÚSQUEDA) -->
+        <div class="catalog-empty-state" id="catalogEmptyState">
+          <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            <line x1="8" y1="11" x2="14" y2="11"></line>
+          </svg>
+          <h3>No se encontraron soluciones coincidentes</h3>
+          <p>Pruebe con otros términos de búsqueda como <em>«Zero Trust»</em>, <em>«Azure»</em>, <em>«Ley 21.719»</em> o seleccione otra categoría en las pestañas superiores.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CIERRE CON CTA AL ASSESSMENT -->
+    <section class="section offer" style="padding: 56px 0;">
+      <div class="container offer-grid">
+        <div class="offer-copy">
+          <div class="eyebrow">Evaluación de Madurez Tecnológica</div>
+          <h2>Conozca sus brechas críticas y ejecute con certidumbre directiva.</h2>
+          <p>Inicie su proceso de gobierno tecnológico mediante nuestro Assessment Ejecutivo de 5 días. Le entregamos una radiografía precisa de riesgos, priorización técnica y una hoja de ruta estructurada a 30, 60 y 90 días respaldada por especialistas.</p>
+        </div>
+        <div style="display: flex; justify-content: flex-end; align-items: center;">
+          <a class="btn btn-primary" href="./index.html#contacto" style="min-width: 260px;">Solicitar Assessment sin costo ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================
+       MODALES / FICHAS AMPLIADAS DESPLEGABLES (14 FICHAS)
+       ======================================================== -->
+
+  <!-- MODAL 1.1: M365 (Idéntico a captura 2) -->
+  <div class="ficha-modal-backdrop" id="ficha-m365" role="dialog" aria-modal="true" aria-labelledby="title-m365">
+    <div class="ficha-modal-box">
+      <button type="button" class="ficha-modal-close-btn" aria-label="Cerrar Ficha">✕</button>
+      <div class="ficha-modal-header">
+        <div class="ficha-modal-pilar">PILAR 1 · MODERNIZACIÓN & WORKPLACE</div>
+        <h3 class="ficha-modal-title" id="title-m365">Productividad Empresarial & Modernización Microsoft 365 (M365 / Entra ID)</h3>
+        <p class="ficha-modal-desc">Consolidar un entorno de colaboración y trabajo moderno seguro, rentable y sin interrupciones, optimizando el licenciamiento corporativo y la gobernanza de identidad[cite: 19, 20].</p>
+      </div>
+      <div class="ficha-section-title">Alcance y Capacidades Técnicas Detalladas[cite: 20]</div>
+      <ul class="ficha-details-list">
+        <li>Migración planificada de mensajería, archivos y colaboración (Exchange, SharePoint, Teams, OneDrive) sin pérdida operacional[cite: 20].</li>
+        <li>Gobierno de identidad unificado con Microsoft Entra ID y directivas de control de acceso corporativo[cite: 20].</li>
+        <li>Auditoría técnica y optimización de licenciamiento M365 (Business Premium, E3, E5) eliminando costos redundantes[cite: 20].</li>
+        <li>Hardening de tenant y políticas de protección contra compromiso de cuentas corporativas coordinadas por especialistas certificados[cite: 20].</li>
+      </ul>
+      <div class="ficha-section-title">Entregables Formales Auditables[cite: 20]</div>
+      <ul class="ficha-deliverables-list">
+        <li>Plan Maestro de Migración o Modernización de Tenant M365[cite: 20].</li>
+        <li>Matriz de Optimización de Licenciamiento y Ahorro Directo[cite: 20].</li>
+        <li>Evaluación de Hardening M365 con remediaciones de seguridad aplicadas[cite: 20].</li>
+      </ul>
+      <div class="ficha-normativa-box">
+        <strong>Alineación Normativa y Estándares:[cite: 20]</strong>
+        <span>CIS Microsoft 365 Benchmark · ISO/IEC 27001 (A.12) · Ley 21.719[cite: 20]</span>
+      </div>
+      <div class="ficha-modal-footer">
+        <button type="button" class="btn-cerrar-ficha">Cerrar Ficha[cite: 20]</button>
+        <a href="./index.html#contacto" class="btn-solicitar-ficha">SOLICITAR EN ASSESSMENT ↗[cite: 20]</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 1.2: MULTI-CLOUD -->
+  <div class="ficha-modal-backdrop" id="ficha-multicloud" role="dialog" aria-modal="true" aria-labelledby="title-multicloud">
+    <div class="ficha-modal-box">
+      <button type="button" class="ficha-modal-close-btn" aria-label="Cerrar Ficha">✕</button>
+      <div class="ficha-modal-header">
+        <div class="ficha-modal-pilar">PILAR 1 · MULTI-CLOUD ENTERPRISE</div>
+        <h3 class="ficha-modal-title" id="title-multicloud">Migración e Infraestructura Multi-Cloud (Azure · AWS · Google Cloud)</h3>
+        <p class="ficha-modal-desc">Migración planificada y adopción multinube sin interrupción del negocio. Eliminamos la dependencia de un solo proveedor y diseñamos arquitecturas resilientes que optimizan rendimiento, disponibilidad y gobierno técnico[cite: 19].</p>
+      </div>
+      <div class="ficha-section-title">Alcance y Capacidades Técnicas Detalladas</div>
+      <ul class="ficha-details-list">
+        <li>Evaluación de viabilidad, dependencias y dimensionamiento de cargas de trabajo (Cloud Readiness Assessment)[cite: 19].</li>
+        <li>Estrategias de migración estructuradas bajo el marco de las 6Rs (Rehost, Replatform, Refactor, Repurchase, Retire, Retain)[cite: 19].</li>
+        <li>Despliegue de zonas de aterrizaje empresariales (Enterprise Cloud Landing Zones) con políticas de seguridad y gobierno preconfiguradas[cite: 19].</li>
+        <li>Diseño de topologías de red privada, interconexión de nubes (Direct Connect, ExpressRoute) y segmentación perimetral.</li>
+      </ul>
+      <div class="ficha-section-title">Entregables Formales Auditables</div>
+      <ul class="ficha-deliverables-list">
+        <li>Documento de Arquitectura de Solución (SAD) y Diagramas de Flujo Multi-Cloud.</li>
+        <li>Matriz de Responsabilidad Compartida y Plan de Cutover Operativo sin tiempo de inactividad.</li>
+        <li>Plantillas de Infraestructura como Código (Terraform / Bicep) con controles de seguridad auditables.</li>
+      </ul>
+      <div class="ficha-normativa-box">
+        <strong>Alineación Normativa y Estándares:</strong>
+        <span>ISO/IEC 27001 (A.12) · CIS Controls v8 (Control 12) · Well-Architected Framework (AWS/Azure)[cite: 19]</span>
+      </div>
+      <div class="ficha-modal-footer">
+        <button type="button" class="btn-cerrar-ficha">Cerrar Ficha</button>
+        <a href="./index.html#contacto" class="btn-solicitar-ficha">SOLICITAR EN ASSESSMENT ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 1.3: VIRTUALIZACIÓN -->
+  <div class="ficha-modal-backdrop" id="ficha-virtualizacion" role="dialog" aria-modal="true" aria-labelledby="title-virt">
+    <div class="ficha-modal-box">
+      <button type="button" class="ficha-modal-close-btn" aria-label="Cerrar Ficha">✕</button>
+      <div class="ficha-modal-header">
+        <div class="ficha-modal-pilar">PILAR 1 · VIRTUALIZACIÓN & ON-PREMISES</div>
+        <h3 class="ficha-modal-title" id="title-virt">Infraestructura Híbrida y Virtualización (VMware / Proxmox / Data Center)</h3>
+        <p class="ficha-modal-desc">Consolidación, migración de hipervisores y soporte de nivel superior para entornos de cómputo y almacenamiento corporativo.</p>
+      </div>
+      <div class="ficha-section-title">Alcance y Capacidades Técnicas Detalladas</div>
+      <ul class="ficha-details-list">
+        <li>Auditoría de licenciamiento, capacidad y rendimiento de entornos VMware vSphere y vSAN.</li>
+        <li>Planes de migración estructurada hacia entornos de código abierto Proxmox VE o nubes públicas sin riesgo de disponibilidad.</li>
+        <li>Hardening de hipervisores, aislamiento de redes de administración y protección de storage SAN/NAS.</li>
+        <li>Soporte proactivo y resolución de incidentes de segundo y tercer nivel con tiempos garantizados.</li>
+      </ul>
+      <div class="ficha-section-title">Entregables Formales Auditables</div>
+      <ul class="ficha-deliverables-list">
+        <li>Informe de Evaluación de Rendimiento y Capacidad de Clústeres (Capacity Planning).</li>
+        <li>Plan de Mitigación de Costes de Licenciamiento e Hipervisores Alternativos.</li>
+        <li>Protocolo Documentado de Actualización de Firmware y Parches de Seguridad.</li>
+      </ul>
+      <div class="ficha-normativa-box">
+        <strong>Alineación Normativa y Estándares:</strong>
+        <span>VMware Security Hardening Guides · ISO 27001 · Estándar CIS para Virtualización</span>
+      </div>
+      <div class="ficha-modal-footer">
+        <button type="button" class="btn-cerrar-ficha">Cerrar Ficha</button>
+        <a href="./index.html#contacto" class="btn-solicitar-ficha">SOLICITAR EN ASSESSMENT ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 1.4: FINOPS -->
+  <div class="ficha-modal-backdrop" id="ficha-finops" role="dialog" aria-modal="true" aria-labelledby="title-finops">
+    <div class="ficha-modal-box">
+      <button type="button" class="ficha-modal-close-btn" aria-label="Cerrar Ficha">✕</button>
+      <div class="ficha-modal-header">
+        <div class="ficha-modal-pilar">PILAR 1 · GOBERNANZA FINANCIERA</div>
+        <h3 class="ficha-modal-title" id="title-finops">FinOps y Gobernanza del Gasto Tecnológico Cloud</h3>
+        <p class="ficha-modal-desc">Cultura de responsabilidad financiera en la nube, optimización continua del consumo y eliminación de costos ocultos.</p>
+      </div>
+      <div class="ficha-section-title">Alcance y Capacidades Técnicas Detalladas</div>
+      <ul class="ficha-details-list">
+        <li>Identificación y supresión de recursos huérfanos, discos no asociados y cargas de trabajo sobredimensionadas.</li>
+        <li>Modelado de compromisos de ahorro mediante Reserved Instances (RIs), Savings Plans y asignación de tags obligatorios.</li>
+        <li>Monitoreo de desvíos presupuestarios mediante alertas en tiempo real y gobernanza de compras centralizada.</li>
+        <li>Cálculo del costo total de propiedad (TCO) y proyecciones de inversión tecnológica plurianual.</li>
+      </ul>
+      <div class="ficha-section-title">Entregables Formales Auditables</div>
+      <ul class="ficha-deliverables-list">
+        <li>Reporte de Ahorros Inmediatos Identificados y Oportunidades de Descuento.</li>
+        <li>Esquema de Etiquetado y Atribución de Costos Cloud por Departamento o Servicio.</li>
+        <li>Panel Directivo de Presupuesto versus Gasto Real con Pronóstico a 12 Meses.</li>
+      </ul>
+      <div class="ficha-normativa-box">
+        <strong>Alineación Normativa y Estándares:</strong>
+        <span>FinOps Foundation Framework · Prácticas de Gobernanza COBIT</span>
+      </div>
+      <div class="ficha-modal-footer">
+        <button type="button" class="btn-cerrar-ficha">Cerrar Ficha</button>
+        <a href="./index.html#contacto" class="btn-solicitar-ficha">SOLICITAR EN ASSESSMENT ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 2.1: IAM -->
+  <div class="ficha-modal-backdrop" id="ficha-iam" role="dialog" aria-modal="true" aria-labelledby="title-iam">
+    <div class="ficha-modal-box">
+      <button type="button" class="ficha-modal-close-btn" aria-label="Cerrar Ficha">✕</button>
+      <div class="ficha-modal-header">
+        <div class="ficha-modal-pilar">PILAR 2 · IDENTIDAD & ZERO TRUST</div>
+        <h3 class="ficha-modal-title" id="title-iam">Gobernanza de Identidad (IAM) y Acceso Condicional Adaptativo</h3>
+        <p class="ficha-modal-desc">Estructuración del perímetro corporativo centrado en la identidad de usuarios, credenciales federadas y privilegios dinámicos.</p>
+      </div>
+      <div class="ficha-section-title">Alcance y Capacidades Técnicas Detalladas</div>
+      <ul class="ficha-details-list">
+        <li>Directivas de Acceso Condicional basadas en contexto de riesgo: geolocalización, salud del dispositivo, red corporativa o pública y comportamiento del usuario.</li>
+        <li>Privilegios Mínimos Just-In-Time (JIT) y Just-Enough-Access (JEA) para eliminar administradores permanentes en el tenant corporativo.</li>
+        <li>Autenticación Multifactor (MFA contextual / FIDO2) resistente a ataques avanzados de ingeniería social, SIM swapping y phishing de reversa.</li>
+        <li>Sincronización segura de directorios locales Active Directory hacia la nube mediante esquemas híbridos cifrados y hardening continuo.</li>
+      </ul>
+      <div class="ficha-section-title">Entregables Formales Auditables</div>
+      <ul class="ficha-deliverables-list">
+        <li>Matriz Ejecutiva de Roles, Permisos y Directivas de Acceso Condicional implementadas.</li>
+        <li>Informe de Hardening de Identidad y Erradicación de Protocolos de Autenticación Heredada.</li>
+        <li>Guía Operativa para Aprobación de Accesos con Privilegios Elevados (PIM/PAM).</li>
+      </ul>
+      <div class="ficha-normativa-box">
+        <strong>Alineación Normativa y Estándares:</strong>
+        <span>NIST SP 800-207 (Zero Trust Architecture) · CIS Controls v8 (C.05, C.06) · ISO/IEC 27001 (A.09)</span>
+      </div>
+      <div class="ficha-modal-footer">
+        <button type="button" class="btn-cerrar-ficha">Cerrar Ficha</button>
+        <a href="./index.html#contacto" class="btn-solicitar-ficha">SOLICITAR EN ASSESSMENT ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 2.2: EDR -->
+  <div class="ficha-modal-backdrop" id="ficha-edr" role="dialog" aria-modal="true" aria-labelledby="title-edr">
+    <div class="ficha-modal-box">
+      <button type="button" class="ficha-modal-close-btn" aria-label="Cerrar Ficha">✕</button>
+      <div class="ficha-modal-header">
+        <div class="ficha-modal-pilar">PILAR 2 · PROTECCIÓN DE PUNTOS FINALES</div>
+        <h3 class="ficha-modal-title" id="title-edr">Defensa Avanzada de Endpoints (EDR / XDR Enterprise)</h3>
+        <p class="ficha-modal-desc">Detección y respuesta heurística contra amenazas dirigidas, living-off-the-land binarios y variantes de ransomware en endpoints y servidores.</p>
+      </div>
+      <div class="ficha-section-title">Alcance y Capacidades Técnicas Detalladas</div>
+      <ul class="ficha-details-list">
+        <li>Monitoreo continuo de procesos, conexiones de red y memoria para neutralizar exploits de día cero.</li>
+        <li>Capacidad de aislamiento de red automatizado de estaciones infectadas, preservando la trazabilidad forense.</li>
+        <li>Control de aplicaciones (AppLocker / Application Control) y bloqueo preventivo de scripts no firmados.</li>
+        <li>Evaluación continua de vulnerabilidades de software y recomendaciones de parches en tiempo real.</li>
+      </ul>
+      <div class="ficha-section-title">Entregables Formales Auditables</div>
+      <ul class="ficha-deliverables-list">
+        <li>Tablero Ejecutivo de Postura de Seguridad y Cumplimiento en el Parque de Estaciones de Trabajo.</li>
+        <li>Reporte de Incidentes Bloqueados con Clasificación MITRE ATT&CK.</li>
+        <li>Plan de Remediación Priorizada para Software y Sistemas Operativos con Vulnerabilidades Críticas.</li>
+      </ul>
+      <div class="ficha-normativa-box">
+        <strong>Alineación Normativa y Estándares:</strong>
+        <span>CIS Controls v8 (Control 10) · MITRE ATT&CK Framework · Ley 21.663 (Ciberseguridad)</span>
+      </div>
+      <div class="ficha-modal-footer">
+        <button type="button" class="btn-cerrar-ficha">Cerrar Ficha</button>
+        <a href="./index.html#contacto" class="btn-solicitar-ficha">SOLICITAR EN ASSESSMENT ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 2.3: INMUTABILIDAD -->
+  <div class="ficha-modal-backdrop" id="ficha-inmutabilidad" role="dialog" aria-modal="true" aria-labelledby="title-inmut">
+    <div class="ficha-modal-box">
+      <button type="button" class="ficha-modal-close-btn" aria-label="Cerrar Ficha">✕</button>
+      <div class="ficha-modal-header">
+        <div class="ficha-modal-pilar">PILAR 2 · ANTI-RANSOMWARE RESILIENCE</div>
+        <h3 class="ficha-modal-title" id="title-inmut">Inmutabilidad de Respaldos (Anti-Ransomware WORM / Air-Gap)</h3>
+        <p class="ficha-modal-desc">Aislamiento y blindaje de las copias doradas frente a intrusiones que intenten cifrar o eliminar las defensas.</p>
+      </div>
+      <div class="ficha-section-title">Alcance y Capacidades Técnicas Detalladas</div>
+      <ul class="ficha-details-list">
+        <li>Repositorios inmutables con tecnología Object Lock / WORM que imposibilitan la modificación o borrado durante el período de retención.</li>
+        <li>Aislamiento físico o lógico estricto (air-gap) que impide el acceso desde la red de operaciones habitual.</li>
+        <li>Autenticación de cuatro ojos (Four-Eyes Principle) para cualquier solicitud de cambio en las políticas de almacenamiento.</li>
+        <li>Verificación criptográfica automatizada para comprobar que ningún archivo haya sido modificado por malware.</li>
+      </ul>
+      <div class="ficha-section-title">Entregables Formales Auditables</div>
+      <ul class="ficha-deliverables-list">
+        <li>Certificado de Configuración Inmutable emitido a la Gerencia de Riesgo y Operaciones.</li>
+        <li>Documentación de Arquitectura de Aislamiento Air-Gap y Control de Acceso Cero Privilegio.</li>
+        <li>Informe de Pruebas de Resistencia ante Intento de Modificación Forzada de Respaldos.</li>
+      </ul>
+      <div class="ficha-normativa-box">
+        <strong>Alineación Normativa y Estándares:</strong>
+        <span>NIST Cybersecurity Framework · CIS Controls v8 (Control 11) · Ley 21.663</span>
+      </div>
+      <div class="ficha-modal-footer">
+        <button type="button" class="btn-cerrar-ficha">Cerrar Ficha</button>
+        <a href="./index.html#contacto" class="btn-solicitar-ficha">SOLICITAR EN ASSESSMENT ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 2.4: CISO -->
+  <div class="ficha-modal-backdrop" id="ficha-ciso" role="dialog" aria-modal="true" aria-labelledby="title-ciso">
+    <div class="ficha-modal-box">
+      <button type="button" class="ficha-modal-close-btn" aria-label="Cerrar Ficha">✕</button>
+      <div class="ficha-modal-header">
+        <div class="ficha-modal-pilar">PILAR 2 · GOBERNANZA & LIDERAZGO</div>
+        <h3 class="ficha-modal-title" id="title-ciso">Liderazgo Estratégico: CISO as a Service (CISOaaS)</h3>
+        <p class="ficha-modal-desc">Gobernanza directiva, gestión integral de riesgos tecnológicos y conducción estratégica de ciberseguridad.</p>
+      </div>
+      <div class="ficha-section-title">Alcance y Capacidades Técnicas Detalladas</div>
+      <ul class="ficha-details-list">
+        <li>Diseño y actualización del Sistema de Gestión de Seguridad de la Información (SGSI) corporativo.</li>
+        <li>Asesoría consultiva y representación ante Comités de Auditoría, Directorio y Entidades Reguladoras.</li>
+        <li>Evaluación continua de riesgos de terceros y proveedores críticos de la cadena de suministro tecnológica.</li>
+        <li>Coordinación de simulacros de crisis directiva ante incidentes de ciberseguridad o fuga de datos masiva.</li>
+      </ul>
+      <div class="ficha-section-title">Entregables Formales Auditables</div>
+      <ul class="ficha-deliverables-list">
+        <li>Política General de Seguridad de la Información y Procedimientos Corporativos Aprobados.</li>
+        <li>Mapa de Riesgos Tecnológicos y Hoja de Ruta Táctica a 12 Meses.</li>
+        <li>Informe de Gobierno para Directorio y Certificación de Postura de Cumplimiento.</li>
+      </ul>
+      <div class="ficha-normativa-box">
+        <strong>Alineación Normativa y Estándares:</strong>
+        <span>ISO/IEC 27001:2022 · Marco NIST · Ley Marco de Ciberseguridad 21.663</span>
+      </div>
+      <div class="ficha-modal-footer">
+        <button type="button" class="btn-cerrar-ficha">Cerrar Ficha</button>
+        <a href="./index.html#contacto" class="btn-solicitar-ficha">SOLICITAR EN ASSESSMENT ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 3.1: LEY 21.719 -->
+  <div class="ficha-modal-backdrop" id="ficha-ley21719" role="dialog" aria-modal="true" aria-labelledby="title-21719">
+    <div class="ficha-modal-box">
+      <button type="button" class="ficha-modal-close-btn" aria-label="Cerrar Ficha">✕</button>
+      <div class="ficha-modal-header">
+        <div class="ficha-modal-pilar">PILAR 3 · PRIVACIDAD & COMPLIANCE LEGAL</div>
+        <h3 class="ficha-modal-title" id="title-21719">Cumplimiento y Adecuación a la Ley de Datos Personales (Ley 21.719)</h3>
+        <p class="ficha-modal-desc">Adecuación integral técnica y legal ante la nueva Agencia Nacional de Protección de Datos Personales.</p>
+      </div>
+      <div class="ficha-section-title">Alcance y Capacidades Técnicas Detalladas</div>
+      <ul class="ficha-details-list">
+        <li>Levantamiento y estructuración del Registro de Actividades de Tratamiento (RAT) obligatorio.</li>
+        <li>Implementación técnica de políticas de privacidad desde el diseño y por defecto en sistemas productivos.</li>
+        <li>Configuración de herramientas de etiquetado, clasificación y prevención de fuga de datos (Microsoft Purview / DLP).</li>
+        <li>Mecanismos de atención y respuesta a derechos ARCO dentro de los plazos legales fijados por la normativa.</li>
+      </ul>
+      <div class="ficha-section-title">Entregables Formales Auditables</div>
+      <ul class="ficha-deliverables-list">
+        <li>Libro Oficial de Registro de Actividades de Tratamiento (RAT).</li>
+        <li>Informe de Evaluación de Impacto en la Protección de Datos (DPIA) para procesos críticos.</li>
+        <li>Protocolo Interno de Gestión de Brechas de Seguridad y Notificación al Regulador.</li>
+      </ul>
+      <div class="ficha-normativa-box">
+        <strong>Alineación Normativa y Estándares:</strong>
+        <span>Ley N° 21.719 (Protección de Datos) · Ley N° 19.628 · Estándar RGPD Europeo</span>
+      </div>
+      <div class="ficha-modal-footer">
+        <button type="button" class="btn-cerrar-ficha">Cerrar Ficha</button>
+        <a href="./index.html#contacto" class="btn-solicitar-ficha">SOLICITAR EN ASSESSMENT ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 3.2: LEY 21.663 -->
+  <div class="ficha-modal-backdrop" id="ficha-ley21663" role="dialog" aria-modal="true" aria-labelledby="title-21663">
+    <div class="ficha-modal-box">
+      <button type="button" class="ficha-modal-close-btn" aria-label="Cerrar Ficha">✕</button>
+      <div class="ficha-modal-header">
+        <div class="ficha-modal-pilar">PILAR 3 · CIBERSEGURIDAD NACIONAL & ANCI</div>
+        <h3 class="ficha-modal-title" id="title-21663">Cumplimiento de la Ley Marco de Ciberseguridad (Ley 21.663 / ANCI)</h3>
+        <p class="ficha-modal-desc">Alineación obligatoria para instituciones esenciales y Operadores de Importancia Vital frente a la ANCI.</p>
+      </div>
+      <div class="ficha-section-title">Alcance y Capacidades Técnicas Detalladas</div>
+      <ul class="ficha-details-list">
+        <li>Determinación del alcance regulatorio según el sector y rol de la organización en la matriz económica.</li>
+        <li>Protocolo técnico de notificación de incidentes graves a la ANCI dentro del plazo perentorio de 3 horas.</li>
+        <li>Ejecución de auditorías técnicas de controles de seguridad obligatorios y pruebas de intrusión éticas.</li>
+        <li>Implementación del catálogo de medidas de gestión de riesgos y continuidad ante ciberataques.</li>
+      </ul>
+      <div class="ficha-section-title">Entregables Formales Auditables</div>
+      <ul class="ficha-deliverables-list">
+        <li>Dictamen de Cumplimiento Técnico frente a Requerimientos ANCI.</li>
+        <li>Protocolo Operativo de Enlace con el CSIRT Nacional y Notificación de Ciberincidentes.</li>
+        <li>Certificación de Pruebas de Hardening y Vulnerabilidades Remediadas.</li>
+      </ul>
+      <div class="ficha-normativa-box">
+        <strong>Alineación Normativa y Estándares:</strong>
+        <span>Ley N° 21.663 (Ciberseguridad y Resiliencia) · Instrucciones Generales ANCI · ISO/IEC 27001</span>
+      </div>
+      <div class="ficha-modal-footer">
+        <button type="button" class="btn-cerrar-ficha">Cerrar Ficha</button>
+        <a href="./index.html#contacto" class="btn-solicitar-ficha">SOLICITAR EN ASSESSMENT ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 4.1: SOC -->
+  <div class="ficha-modal-backdrop" id="ficha-soc" role="dialog" aria-modal="true" aria-labelledby="title-soc">
+    <div class="ficha-modal-box">
+      <button type="button" class="ficha-modal-close-btn" aria-label="Cerrar Ficha">✕</button>
+      <div class="ficha-modal-header">
+        <div class="ficha-modal-pilar">PILAR 4 · OPERACIÓN & RESPUESTA</div>
+        <h3 class="ficha-modal-title" id="title-soc">Gestión Unificada SIEM, SOAR y Monitoreo SOC 24/7</h3>
+        <p class="ficha-modal-desc">Vigilancia permanente de eventos, detección de anomalías contextuales y orquestación coordinada de respuesta.</p>
+      </div>
+      <div class="ficha-section-title">Alcance y Capacidades Técnicas Detalladas</div>
+      <ul class="ficha-details-list">
+        <li>Centralización de eventos de seguridad (logs) procedentes de nubes públicas, infraestructura local, VPNs y firewalls.</li>
+        <li>Reglas de correlación automatizadas que detectan intentos de exfiltración de información y credenciales filtradas.</li>
+        <li>Automatización de respuestas inmediatas mediante playbooks SOAR (bloqueo de IP, restablecimiento de tokens, cierre de sesiones).</li>
+        <li>Atención ininterrumpida por ingenieros de ciberseguridad con SLA formal de notificación e intervención.</li>
+      </ul>
+      <div class="ficha-section-title">Entregables Formales Auditables</div>
+      <ul class="ficha-deliverables-list">
+        <li>Informe Ejecutivo Mensual de Amenazas Mitigadas y Tiempos de Respuesta (MTTD / MTTR).</li>
+        <li>Registro Trazable de Incidentes y Evidencias Digitales para Cumplimiento Regulatorio.</li>
+        <li>Actas de Comités Periódicos de Ciberseguridad con Seguimiento de Riesgos.</li>
+      </ul>
+      <div class="ficha-normativa-box">
+        <strong>Alineación Normativa y Estándares:</strong>
+        <span>ISO/IEC 27001 (A.16) · NIST CSF (Detect & Respond) · Mandato de notificación Ley 21.663</span>
+      </div>
+      <div class="ficha-modal-footer">
+        <button type="button" class="btn-cerrar-ficha">Cerrar Ficha</button>
+        <a href="./index.html#contacto" class="btn-solicitar-ficha">SOLICITAR EN ASSESSMENT ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 4.2: RESPALDO -->
+  <div class="ficha-modal-backdrop" id="ficha-respaldo" role="dialog" aria-modal="true" aria-labelledby="title-resp">
+    <div class="ficha-modal-box">
+      <button type="button" class="ficha-modal-close-btn" aria-label="Cerrar Ficha">✕</button>
+      <div class="ficha-modal-header">
+        <div class="ficha-modal-pilar">PILAR 4 · RESPALDO CORPORATIVO</div>
+        <h3 class="ficha-modal-title" id="title-resp">Sistemas de Copias de Seguridad Corporativas (SaaS & Datacenter)</h3>
+        <p class="ficha-modal-desc">Aseguramiento permanente de datos corporativos distribuidos, con retención garantizada y respaldo cruzado.</p>
+      </div>
+      <div class="ficha-section-title">Alcance y Capacidades Técnicas Detalladas</div>
+      <ul class="ficha-details-list">
+        <li>Protección nativa para entornos Microsoft 365, bases de datos SQL, máquinas virtuales y almacenamiento físico.</li>
+        <li>Gestión centralizada de ventanas de respaldo para minimizar impacto en el ancho de banda empresarial.</li>
+        <li>Cifrado de alto nivel (AES-256) aplicado en el origen, durante la transmisión y en el repositorio final.</li>
+        <li>Pruebas automatizadas diarias de consistencia e integridad de los datos resguardados.</li>
+      </ul>
+      <div class="ficha-section-title">Entregables Formales Auditables</div>
+      <ul class="ficha-deliverables-list">
+        <li>Política Formal de Respaldo Corporativo con Calendario de Retención por Tipología de Datos.</li>
+        <li>Registro de Trazabilidad y Logs Diarios de Ejecución de Copias sin Errores.</li>
+        <li>Acta de Verificación Técnica de Restaurabilidad de Información Crítica.</li>
+      </ul>
+      <div class="ficha-normativa-box">
+        <strong>Alineación Normativa y Estándares:</strong>
+        <span>ISO/IEC 27001 (A.12.3) · Regla de respaldo 3-2-1-1-0</span>
+      </div>
+      <div class="ficha-modal-footer">
+        <button type="button" class="btn-cerrar-ficha">Cerrar Ficha</button>
+        <a href="./index.html#contacto" class="btn-solicitar-ficha">SOLICITAR EN ASSESSMENT ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 4.3: DRAAS -->
+  <div class="ficha-modal-backdrop" id="ficha-draas" role="dialog" aria-modal="true" aria-labelledby="title-draas">
+    <div class="ficha-modal-box">
+      <button type="button" class="ficha-modal-close-btn" aria-label="Cerrar Ficha">✕</button>
+      <div class="ficha-modal-header">
+        <div class="ficha-modal-pilar">PILAR 4 · RECUPERACIÓN ANTE DESASTRES</div>
+        <h3 class="ficha-modal-title" id="title-draas">Recuperación ante Desastres como Servicio (DRaaS y Conmutación)</h3>
+        <p class="ficha-modal-desc">Infraestructura secundaria en nube o datacenter alterno lista para encendido inmediato en escenarios catastróficos.</p>
+      </div>
+      <div class="ficha-section-title">Alcance y Capacidades Técnicas Detalladas</div>
+      <ul class="ficha-details-list">
+        <li>Replicación continua en tiempo real de máquinas virtuales y sistemas transaccionales críticos.</li>
+        <li>Orquestación integral de failover que levanta servicios de red, DNS y cómputo de manera automatizada.</li>
+        <li>Simulacros periódicos en entornos aislados (Sandbox) sin impacto alguno en la operación de producción.</li>
+        <li>Mecanismos de failback ordenado para retornar al sitio primario una vez resuelto el incidente.</li>
+      </ul>
+      <div class="ficha-section-title">Entregables Formales Auditables</div>
+      <ul class="ficha-deliverables-list">
+        <li>Plan de Continuidad y Recuperación ante Desastres (Disaster Recovery Plan - DRP).</li>
+        <li>Runbooks Técnicos de Procedimiento de Conmutación Paso a Paso.</li>
+        <li>Actas Oficiales de Simulacros Semestrales con Medición de Tiempos de Respuesta.</li>
+      </ul>
+      <div class="ficha-normativa-box">
+        <strong>Alineación Normativa y Estándares:</strong>
+        <span>ISO 22301 (Gestión de Continuidad de Negocio) · Ley 21.663</span>
+      </div>
+      <div class="ficha-modal-footer">
+        <button type="button" class="btn-cerrar-ficha">Cerrar Ficha</button>
+        <a href="./index.html#contacto" class="btn-solicitar-ficha">SOLICITAR EN ASSESSMENT ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 4.4: RTO/RPO -->
+  <div class="ficha-modal-backdrop" id="ficha-rto" role="dialog" aria-modal="true" aria-labelledby="title-rto">
+    <div class="ficha-modal-box">
+      <button type="button" class="ficha-modal-close-btn" aria-label="Cerrar Ficha">✕</button>
+      <div class="ficha-modal-header">
+        <div class="ficha-modal-pilar">PILAR 4 · GOBERNANZA CONTRACTUAL</div>
+        <h3 class="ficha-modal-title" id="title-rto">Garantía Contractual de Tiempos de Caída y Pérdida (RTO / RPO)</h3>
+        <p class="ficha-modal-desc">Acuerdo vinculante que compromete formalmente la capacidad técnica de recuperación ante el directorio.</p>
+      </div>
+      <div class="ficha-section-title">Alcance y Capacidades Técnicas Detalladas</div>
+      <ul class="ficha-details-list">
+        <li>Definición cuantitativa de tiempos máximos tolerables de interrupción (RTO) por categoría de sistema.</li>
+        <li>Establecimiento de límites estrictos de pérdida de datos (RPO) basados en la criticidad financiera y regulatoria.</li>
+        <li>Cláusulas de nivel de servicio (SLA) con compromisos de penalización económica por incumplimiento.</li>
+        <li>Monitoreo continuo de telemetría de replicación para detectar desviaciones respecto al RPO comprometido.</li>
+      </ul>
+      <div class="ficha-section-title">Entregables Formales Auditables</div>
+      <ul class="ficha-deliverables-list">
+        <li>Contrato y Anexo Técnico de Acuerdos de Nivel de Servicio (SLA/OLA).</li>
+        <li>Matriz de Criticidad de Negocio (BIA - Business Impact Analysis).</li>
+        <li>Reporte Mensual Ejecutivo de Disponibilidad y Cumplimiento de SLAs.</li>
+      </ul>
+      <div class="ficha-normativa-box">
+        <strong>Alineación Normativa y Estándares:</strong>
+        <span>ISO 22301 · ITIL Service Level Management</span>
+      </div>
+      <div class="ficha-modal-footer">
+        <button type="button" class="btn-cerrar-ficha">Cerrar Ficha</button>
+        <a href="./index.html#contacto" class="btn-solicitar-ficha">SOLICITAR EN ASSESSMENT ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="brand" href="./index.html#inicio" aria-label="Meridio, volver al inicio">
+            <img class="brand-logo footer-logo" src="./assets/logo.png" alt="Meridio" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
+            <span class="brand-text" style="display: none; color: #fff;">Merid<span class="brand-i">i</span>o</span>
+          </a>
+          <p>Un solo responsable para orquestar tecnología, seguridad y cumplimiento en sectores de alta criticidad.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Soluciones</h4>
+          <a href="./soluciones.html">1. Modernización</a>
+          <a href="./soluciones.html">2. Ciberseguridad</a>
+          <a href="./soluciones.html">3. Cumplimiento</a>
+          <a href="./soluciones.html">4. Operación</a>
+        </div>
+        <div class="footer-col">
+          <h4>Ecosistema</h4>
+          <a href="./index.html#metodo">Modelo de servicio</a>
+          <a href="./index.html#metodo">Gobernanza y SLA</a>
+          <a href="./index.html#contacto">Cobertura regional</a>
+        </div>
+        <div class="footer-col">
+          <h4>Marco Legal</h4>
+          <a href="./index.html#marcos">Ley 21.719 (Datos)</a>
+          <a href="./index.html#marcos">Ley 21.663 (Ciberseguridad)</a>
+          <a href="./politica-privacidad.html">Política de Privacidad</a>
+        </div>
+        <div class="footer-col">
+          <h4>Compañía</h4>
+          <span class="footer-info">Santiago de Chile, operación continua</span>
+          <a href="mailto:contacto@meridio.cl" class="footer-contact-link">contacto@meridio.cl</a>
+          <a href="tel:+56951159279" class="footer-contact-link">+56 9 5115 9279</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> Meridio SpA. Todos los derechos reservados.</span>
+        <span>Gobernanza tecnológica y de ciberseguridad con responsabilidad | Chile</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./script.js" defer></script>
+</body>
+</html>
