@@ -1,174 +1,120 @@
-(() => {
-  const menuButton = document.getElementById('mobileMenu');
-  const nav = document.getElementById('mainNav');
-  const yearEl = document.getElementById('year');
+document.addEventListener('DOMContentLoaded', () => {
+  // 1. Año dinámico en footer
+  const yearSpan = document.getElementById('year');
+  if (yearSpan) {
+    yearSpan.textContent = new Date().getFullYear();
+  }
+
+  // 2. Menú móvil
+  const mobileMenuBtn = document.getElementById('mobileMenu');
+  const mainNav = document.getElementById('mainNav');
+  if (mobileMenuBtn && mainNav) {
+    mobileMenuBtn.addEventListener('click', () => {
+      const isOpen = mainNav.classList.toggle('open');
+      mobileMenuBtn.setAttribute('aria-expanded', isOpen);
+    });
+  }
+
+  // 3. Dropdown menú (Quiénes somos)
   const dropdown = document.getElementById('aboutDropdown');
-  const dropdownBtn = document.getElementById('dropdownTrigger');
-
-  // Cerrar menú desplegable
-  const closeDropdown = () => {
-    if (!dropdown || !dropdownBtn) return;
-    dropdown.classList.remove('open');
-    dropdownBtn.setAttribute('aria-expanded', 'false');
-  };
-
-  // Alternar apertura fija por clic
-  if (dropdownBtn && dropdown) {
-    dropdownBtn.addEventListener('click', (e) => {
+  const dropdownTrigger = document.getElementById('dropdownTrigger');
+  if (dropdown && dropdownTrigger) {
+    dropdownTrigger.addEventListener('click', (e) => {
       e.stopPropagation();
-      const isOpen = dropdown.classList.toggle('open');
-      dropdownBtn.setAttribute('aria-expanded', String(isOpen));
-    });
-  }
-
-  // Cerrar navegación responsive
-  const closeMenu = () => {
-    if (!nav || !menuButton) return;
-    nav.classList.remove('open');
-    menuButton.setAttribute('aria-expanded', 'false');
-    menuButton.setAttribute('aria-label', 'Abrir menú');
-    closeDropdown();
-  };
-
-  if (menuButton && nav) {
-    menuButton.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const isOpen = nav.classList.toggle('open');
-      menuButton.setAttribute('aria-expanded', String(isOpen));
-      menuButton.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
+      const expanded = dropdownTrigger.getAttribute('aria-expanded') === 'true';
+      dropdownTrigger.setAttribute('aria-expanded', !expanded);
+      dropdown.classList.toggle('active');
     });
 
-    // Cerrar el menú responsive o dropdown al hacer clic en cualquier link interno/externo
-    nav.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        closeDropdown();
-        closeMenu();
-      });
-    });
-
-    // Cerrar al pulsar Escape
-    document.addEventListener('keydown', event => {
-      if (event.key === 'Escape') {
-        closeDropdown();
-        closeMenu();
-      }
-    });
-
-    // Cerrar dropdown al hacer clic en cualquier otro lado de la pantalla
-    document.addEventListener('click', (event) => {
-      if (dropdown && !dropdown.contains(event.target)) {
-        closeDropdown();
-      }
-      if (!nav.contains(event.target) && !menuButton.contains(event.target)) {
-        closeMenu();
+    document.addEventListener('click', (e) => {
+      if (!dropdown.contains(e.target)) {
+        dropdown.classList.remove('active');
+        dropdownTrigger.setAttribute('aria-expanded', 'false');
       }
     });
   }
 
-  // Manejo de modales para fichas técnicas completas en Soluciones
-  const fichaTriggers = document.querySelectorAll('.btn-ficha-trigger');
-  const fichaBackdrops = document.querySelectorAll('.ficha-modal-backdrop');
+  // 4. Filtrado por pilares
+  const filterButtons = document.querySelectorAll('.pillar-btn');
+  const pillarSections = document.querySelectorAll('[data-pillar-section]');
+  const solutionCards = document.querySelectorAll('.solution-card');
 
-  const openFicha = (targetId) => {
-    const modal = document.getElementById(targetId);
-    if (!modal) return;
-    modal.classList.add('open');
-    document.body.style.overflow = 'hidden';
-  };
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
 
-  const closeFichas = () => {
-    fichaBackdrops.forEach(modal => {
-      modal.classList.remove('open');
-    });
-    document.body.style.overflow = '';
-  };
+      const pillar = btn.dataset.pillar;
 
-  if (fichaTriggers.length > 0) {
-    fichaTriggers.forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        const targetId = btn.getAttribute('data-target');
-        openFicha(targetId);
-      });
-    });
+      if (pillar === 'all') {
+        pillarSections.forEach(sec => sec.style.display = '');
+        solutionCards.forEach(card => card.style.display = '');
+      } else {
+        pillarSections.forEach(sec => {
+          if (sec.dataset.pillarSection === pillar) {
+            sec.style.display = '';
+          } else {
+            sec.style.display = 'none';
+          }
+        });
 
-    fichaBackdrops.forEach(modal => {
-      modal.addEventListener('click', (e) => {
-        if (e.target === modal) {
-          closeFichas();
-        }
-      });
-      const closeBtn = modal.querySelector('.ficha-modal-close-btn');
-      const closeLink = modal.querySelector('.btn-cerrar-ficha');
-      if (closeBtn) closeBtn.addEventListener('click', closeFichas);
-      if (closeLink) closeLink.addEventListener('click', closeFichas);
-    });
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        closeFichas();
+        solutionCards.forEach(card => {
+          if (card.dataset.pillar === pillar) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
       }
     });
-  }
+  });
 
-  // Filtrado reactivo por pestaña de pilar y buscador en tiempo real (Soluciones)
-  const catalogTabs = document.querySelectorAll('.catalog-tab');
-  const searchInput = document.getElementById('catalogSearchInput');
-  const solutionCards = document.querySelectorAll('.solution-card[data-pilar]');
-  const countEl = document.getElementById('resultsCount');
-  const emptyState = document.getElementById('catalogEmptyState');
+  // 5. Modales de Fichas Técnicas
+  const modalTriggers = document.querySelectorAll('.btn-ficha-trigger');
+  const modalBackdrops = document.querySelectorAll('.ficha-modal-backdrop');
 
-  if (catalogTabs.length > 0 && solutionCards.length > 0) {
-    let currentPillar = 'all';
-    let searchQuery = '';
-
-    const filterCards = () => {
-      let visibleCount = 0;
-      const q = searchQuery.toLowerCase().trim();
-
-      solutionCards.forEach(card => {
-        const cardPilar = card.getAttribute('data-pilar');
-        const cardText = card.textContent.toLowerCase();
-
-        const matchesPillar = (currentPillar === 'all' || cardPilar === currentPillar);
-        const matchesSearch = (!q || cardText.includes(q));
-
-        if (matchesPillar && matchesSearch) {
-          card.style.display = 'flex';
-          visibleCount++;
-        } else {
-          card.style.display = 'none';
-        }
-      });
-
-      if (countEl) {
-        countEl.textContent = `${visibleCount} soluciones disponibles`;
-      }
-
-      if (emptyState) {
-        emptyState.style.display = visibleCount === 0 ? 'block' : 'none';
-      }
-    };
-
-    catalogTabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        catalogTabs.forEach(t => t.classList.remove('active'));
-        tab.classList.add('active');
-        currentPillar = tab.getAttribute('data-pillar');
-        filterCards();
-      });
-    });
-
-    if (searchInput) {
-      searchInput.addEventListener('input', (e) => {
-        searchQuery = e.target.value;
-        filterCards();
-      });
+  const openModal = (modalId) => {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
     }
-  }
+  };
 
-  // Año dinámico en footer
-  if (yearEl) {
-    yearEl.textContent = new Date().getFullYear();
-  }
-})();
+  const closeModal = (modal) => {
+    if (modal) {
+      modal.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  };
+
+  modalTriggers.forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      const targetId = trigger.getAttribute('data-target');
+      if (targetId) openModal(targetId);
+    });
+  });
+
+  modalBackdrops.forEach(modal => {
+    // Cerrar con botón X o botón Cerrar
+    const closeBtns = modal.querySelectorAll('.ficha-modal-close-btn, .btn-cerrar-ficha');
+    closeBtns.forEach(btn => {
+      btn.addEventListener('click', () => closeModal(modal));
+    });
+
+    // Cerrar al hacer clic fuera de la caja
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        closeModal(modal);
+      }
+    });
+  });
+
+  // Cerrar con Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      const activeModal = document.querySelector('.ficha-modal-backdrop.open');
+      if (activeModal) closeModal(activeModal);
+    }
+  });
+});
