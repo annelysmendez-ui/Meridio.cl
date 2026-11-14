@@ -9,12 +9,18 @@
   <meta property="og:description" content="Meridio es el punto de referencia donde la tecnología, la seguridad y el cumplimiento se encuentran.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_CL">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="./assets/favicon-192.png">
+  <link rel="apple-touch-icon" href="./assets/favicon-192.png">
   <title>Meridio — Nube, Ciberseguridad y Cumplimiento</title>
 
   <!-- Fuentes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Cloudflare Turnstile -->
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
   <!-- Hoja de estilos -->
   <link rel="stylesheet" href="./styles.css">
@@ -27,12 +33,14 @@
         <span class="brand-text" style="display: none;">Merid<span class="brand-i">i</span>o</span>
       </a>
       <nav class="nav" id="mainNav" aria-label="Navegación principal">
-        <a href="#problema">El problema</a>
-        <a href="#metodo">Metodología</a>
+        <a href="#problema">Problema</a>
+        <a href="#pilares">Qué hacemos</a>
+        <a href="#metodo">Cómo trabajamos</a>
         <a href="#marcos">Leyes y marcos</a>
+        <a href="#porque">Por qué Meridio</a>
         <a href="./soluciones.html">Servicios</a>
       </nav>
-      <a class="btn btn-primary header-cta" href="#contacto">Agendar Assessment gratuito ↗</a>
+      <a class="btn btn-primary header-cta" href="#contacto">Agendar diagnóstico gratuito ↗</a>
       <button class="mobile-menu" id="mobileMenu" type="button" aria-label="Abrir menú" aria-controls="mainNav" aria-expanded="false">
         <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
           <path d="M4 7h16M4 12h16M4 17h16"/>
@@ -48,8 +56,8 @@
         <div class="hero-grid">
           <div class="hero-content">
             <div class="eyebrow teal">Meridio | Tecnología, Seguridad y cumplimiento</div>
-            <h1 class="hero-headline">Nube, ciberseguridad y cumplimiento bajo un solo responsable y un solo SLA.</h1>
-            <p class="hero-copy">Meridio ordena su infraestructura, la protege y le ayuda a demostrar el cumplimiento de las leyes 21.663 y 21.719 con evidencia técnica; usted conserva el control y la visión directiva, nosotros respondemos por la continuidad y los resultados bajo un solo SLA.</p>
+            <h1 class="hero-headline">El problema no es la falta de tecnología. Es que nadie responde cuando falla.</h1>
+            <p class="hero-copy">Meridio asume la responsabilidad de su infraestructura, su ciberseguridad y su cumplimiento legal: un solo interlocutor, un solo plan y un contrato que deja claro quién responde.</p>
 
             <div class="hero-note">
               <span class="seal" aria-hidden="true">
@@ -58,7 +66,7 @@
                   <path d="m8.5 12 2.2 2.2 4.8-5"/>
                 </svg>
               </span>
-              <span>Assessment de 5 días. Modalidad remota, sin fricción ni acceso invasivo a su operación, entregable formal: mapa integral de riesgos y hoja de ruta de gobierno.</span>
+              <span>Informe ejecutivo en 5 días hábiles · 100% remoto · Solo lectura · sin costo</span>
             </div>
           </div>
           
@@ -71,33 +79,57 @@
           </div>
         </div>
         <div class="hero-foot">
-          <div class="proof"><span class="proof-mark"></span><span>+20 años de experiencia del equipo</span></div>
-          <div class="areas"><span>Operación 24/7</span><span>Estándar enterprise</span><span>Sectores de alta criticidad</span></div>
+          <div class="proof"><span class="proof-mark"></span><span>+20 años de experiencia en banca, telecomunicaciones, data center y sector público</span></div>
+          <div class="proof"><span class="proof-mark"></span><span>Marcos con los que trabajamos: Ley 21.663 · Ley 21.719 · ISO 27001 · CIS · NIST</span></div>
         </div>
       </div>
     </section>
 
-    <!-- EL PROBLEMA / CONTEXTO -->
+    <!-- 01. EL PROBLEMA / CONTEXTO -->
     <section class="section section-white target-section" id="problema">
       <div class="container">
         <div class="section-head compact-head">
-          <div class="eyebrow">El problema</div>
-          <h2>El riesgo no es la tecnología, sino en que nadie responde por el conjunto.</h2>
-          <p class="section-intro">Cuando la nube, la seguridad, los resultados y el cumplimiento tienen cinco proveedores distintos, cada uno cumple su parte y nadie responde por el resultado; tres escenarios que vemos con frecuencia:</p>
+          <div class="eyebrow">Problema</div>
+          <h2>Cuando cada proveedor cumple su parte, nadie responde por el resultado.</h2>
+          <p class="section-intro">Cuando la nube, la seguridad y el cumplimiento tienen proveedores distintos, cada uno responde por lo suyo y nadie por el conjunto. Cuatro escenarios que vemos con frecuencia:</p>
         </div>
-        <div class="three-grid">
+        <div class="four-grid">
           <!-- CASO 01 -->
           <article class="card insight interactive-card">
             <div class="line-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M12 3 20 6v5c0 5-3.2 8.2-8 10-4.8-1.8-8-5-8-10V6l8-3Z"/><path d="M8.5 12.2 10.7 14.4 15.5 9.6"/></svg>
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/><path d="m17 5 2 2 3-3"/></svg>
             </div>
-            <div class="num">01 / RANSOMWARE</div>
-            <h3>Ransomware sin respaldo inmutable</h3>
+            <div class="num">01 / OBSOLESCENCIA</div>
+            <h3>Exchange 2016/2019 sin soporte</h3>
             
             <div class="case-flow">
               <div class="flow-block">
                 <span class="flow-tag">QUÉ PASA</span>
-                <p class="flow-bajada">Los respaldos estaban en la misma red y también quedan cifrados.</p>
+                <p class="flow-bajada">Desde octubre de 2025 no recibe parches de seguridad.</p>
+              </div>
+              <div class="flow-block">
+                <span class="flow-tag">QUÉ LE CUESTA</span>
+                <p class="flow-bajada">Una vulnerabilidad sin corrección en el correo de toda la empresa.</p>
+              </div>
+              <div class="flow-block solution">
+                <span class="flow-tag">LO QUE HACEMOS</span>
+                <p class="flow-bajada">Migración a Microsoft 365 o Google Workspace, con seguridad desde el primer día.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- CASO 02 -->
+          <article class="card insight interactive-card">
+            <div class="line-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 3 20 6v5c0 5-3.2 8.2-8 10-4.8-1.8-8-5-8-10V6l8-3Z"/><path d="M8.5 12.2 10.7 14.4 15.5 9.6"/></svg>
+            </div>
+            <div class="num">02 / RANSOMWARE</div>
+            <h3>Ataque sin respaldo inmutable</h3>
+            
+            <div class="case-flow">
+              <div class="flow-block">
+                <span class="flow-tag">QUÉ PASA</span>
+                <p class="flow-bajada">Los respaldos están en la misma red y también quedan cifrados.</p>
               </div>
               <div class="flow-block">
                 <span class="flow-tag">QUÉ LE CUESTA</span>
@@ -110,36 +142,36 @@
             </div>
           </article>
 
-          <!-- CASO 02 -->
+          <!-- CASO 03 -->
           <article class="card insight interactive-card">
             <div class="line-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/><path d="m17 5 2 2 3-3"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
             </div>
-            <div class="num">02 / OBSOLESCENCIA</div>
-            <h3>Exchange server 2016/2019 sin soporte</h3>
+            <div class="num">03 / INCIDENTE</div>
+            <h3>Alerta sin un responsable claro</h3>
             
             <div class="case-flow">
               <div class="flow-block">
                 <span class="flow-tag">QUÉ PASA</span>
-                <p class="flow-bajada">Desde octubre del 2025 no recibe parches de seguridad.</p>
+                <p class="flow-bajada">Suena una alerta y cada proveedor dice que no es su parte.</p>
               </div>
               <div class="flow-block">
                 <span class="flow-tag">QUÉ LE CUESTA</span>
-                <p class="flow-bajada">Una vulnerabilidad sin corrección en el correo de toda la empresa.</p>
+                <p class="flow-bajada">Horas perdidas decidiendo quién actúa mientras el problema avanza.</p>
               </div>
               <div class="flow-block solution">
                 <span class="flow-tag">LO QUE HACEMOS</span>
-                <p class="flow-bajada">M365 o Google Workspace con seguridad desde el día uno.</p>
+                <p class="flow-bajada">Monitoreo, protocolo de respuesta y un solo responsable.</p>
               </div>
             </div>
           </article>
 
-          <!-- CASO 03 -->
+          <!-- CASO 04 -->
           <article class="card insight interactive-card">
             <div class="line-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M7 18h10a4 4 0 0 0 .5-8A5.5 5.5 0 0 0 7 8a4 4 0 0 0 0 10Z"/><path d="M9 14h6M12 11v6"/></svg>
             </div>
-            <div class="num">03 / REGULACIÓN</div>
+            <div class="num">04 / REGULACIÓN</div>
             <h3>Datos personales sin evidencia</h3>
             
             <div class="case-flow">
@@ -149,11 +181,11 @@
               </div>
               <div class="flow-block">
                 <span class="flow-tag">QUÉ LE CUESTA</span>
-                <p class="flow-bajada">Multas de hasta 20.000 UTM bajo la ley 21.719.</p>
+                <p class="flow-bajada">Multas de hasta 20.000 UTM según la gravedad, bajo la Ley 21.719.</p>
               </div>
               <div class="flow-block solution">
                 <span class="flow-tag">LO QUE HACEMOS</span>
-                <p class="flow-bajada">Mapa de datos, Portal RAT y evidencia técnica de controles.</p>
+                <p class="flow-bajada">Mapa de datos, registro de actividades de tratamiento y evidencia de controles.</p>
               </div>
             </div>
           </article>
@@ -161,135 +193,129 @@
       </div>
     </section>
 
-    <!-- METODOLOGÍA -->
-    <section class="section method target-section" id="metodo">
+    <!-- 02. QUÉ HACEMOS / CUATRO PILARES -->
+    <section class="section method target-section" id="pilares">
       <div class="container">
         <div class="section-head">
-          <div class="eyebrow">Metodología de Gobierno</div>
+          <div class="eyebrow">Qué hacemos</div>
+          <h2>Cuatro pilares de control, un solo responsable.</h2>
+          <p class="section-intro">Cada pilar tiene servicios propios, pero todos se coordinan bajo un mismo plan y un mismo contrato.</p>
+        </div>
+        <div class="pillars-grid">
+          <!-- Pilar 1: Modernización -->
+          <article class="card pillar interactive-card">
+            <div class="kicker">PILAR 01 - INFRAESTRUCTURA</div>
+            <h3>Mantener vigente, ordenado y bajo control lo que sostiene el negocio</h3>
+            <p>Migramos y modernizamos sus sistemas, sin interrumpir el negocio.</p>
+            <div class="services-list">
+              <a href="./soluciones.html" class="service-link">Migración de correo</a>
+              <span class="sep">·</span>
+              <a href="./soluciones.html" class="service-link">Nube y multi-Cloud</a>
+              <span class="sep">·</span>
+              <a href="./soluciones.html" class="service-link">Virtualización y servidores</a>
+              <span class="sep">·</span>
+              <a href="./soluciones.html" class="service-link">Optimización de costos</a>
+            </div>
+          </article>
+
+          <!-- Pilar 2: Ciberseguridad -->
+          <article class="card pillar interactive-card">
+            <div class="kicker">PILAR 02 - CIBERSEGURIDAD</div>
+            <h3>Cerrar las brechas antes de que alguien las encuentre</h3>
+            <p>Protegemos identidad, correo, equipos y datos antes de que alguien los ataque.</p>
+            <div class="services-list">
+              <a href="./soluciones.html" class="service-link">Zero Trust</a>
+              <span class="sep">·</span>
+              <a href="./soluciones.html" class="service-link">Identidad y acceso (MFA)</a>
+              <span class="sep">·</span>
+              <a href="./soluciones.html" class="service-link">Protección de equipos y correo</a>
+              <span class="sep">·</span>
+              <a href="./soluciones.html" class="service-link">CISO como servicio</a>
+            </div>
+          </article>
+
+          <!-- Pilar 3: Operación -->
+          <article class="card pillar interactive-card">
+            <div class="kicker">PILAR 03 - OPERACIÓN</div>
+            <h3>Cuando algo falla, alguien responde</h3>
+            <p>Vigilamos sus sistemas, respondemos ante incidentes y recuperamos la operación.</p>
+            <div class="services-list">
+              <a href="./soluciones.html" class="service-link">SOC gestionado</a>
+              <span class="sep">·</span>
+              <a href="./soluciones.html" class="service-link">Respuesta a incidentes</a>
+              <span class="sep">·</span>
+              <a href="./soluciones.html" class="service-link">Respaldo y recuperación</a>
+              <span class="sep">·</span>
+              <a href="./soluciones.html" class="service-link">Monitoreo de infraestructura</a>
+            </div>
+          </article>
+
+          <!-- Pilar 4: Cumplimiento -->
+          <article class="card pillar interactive-card">
+            <div class="kicker">PILAR 04 - CUMPLIMIENTO</div>
+            <h3>Demostrar con evidencia, no con intención</h3>
+            <p>Convertimos las exigencias de la ley en evidencia que usted puede mostrar..</p>
+            <div class="services-list">
+              <a href="./soluciones.html" class="service-link">Plataforma RAT</a>
+              <span class="sep">·</span>
+              <a href="./soluciones.html" class="service-link">Ley 21.719: Datos personales</a>
+              <span class="sep">·</span>
+              <a href="./soluciones.html" class="service-link">Ley 21.663: Ciberseguridad</a>
+              <span class="sep">·</span>
+              <a href="./soluciones.html" class="service-link">ISO 27001, CIS Y NIST</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03. CÓMO TRABAJAMOS / METODOLOGÍA -->
+    <section class="section section-white target-section" id="metodo">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Cómo trabajamos</div>
           <h2>Del diagnóstico a la operación, con el mismo responsable.</h2>
-          <p class="section-intro">Estructuramos un marco de gobernanza riguroso donde gestionamos el ciclo de vida operativo y respondemos formalmente por los resultados bajo acuerdos de nivel de servicio (SLA) vinculantes.</p>
+          <p class="section-intro">Usted firma un solo contrato. Nosotros coordinamos a los especialistas y respondemos por el servicio completo.</p>
         </div>
         <div class="steps">
           <article class="card step interactive-card">
             <div class="step-no">01</div>
-            <h3>Diagnóstico y análisis de brechas</h3>
-            <p>Revisamos qué riesgos tienes, quién responde hoy por ellos y qué evidencia puedes demostrar. Sin acceso a tu operación.</p>
+            <h3>Diagnóstico y brechas</h3>
+            <p>Revisamos qué riesgos tiene, quién responde hoy por ellos y qué evidencia puede demostrar. Sin modificar nada en su operación.</p>
           </article>
           <article class="card step interactive-card">
             <div class="step-no">02</div>
             <h3>Diseño del modelo</h3>
-            <p>Definimos el modelo de responsabilidad: qué hace Meridio, qué hace el ecosistema especializado, con qué SLA y con qué reporte. El cliente firma un contrato de gobierno, no una orden de compra.</p>
+            <p>Definimos quién hace qué, con qué niveles de servicio y con qué reportes. Usted firma un contrato qué deja claro quién responde, no una orden de compra.</p>
           </article>
           <article class="card step interactive-card">
             <div class="step-no">03</div>
-            <h3>Orquestación del ecosistema</h3>
-            <p>Coordinamos a los especialistas técnicos bajo un solo plan y un solo responsable. El cliente no gestiona cinco proveedores: gestiona una conversación con Meridio y su ecosistema.</p>
+            <h3>Ejecución coordinada</h3>
+            <p>Coordinamos a los especialistas bajo un solo plan y un solo responsable. Usted no gestiona cinco proveedores: conversa con Meridio.</p>
           </article>
           <article class="card step interactive-card">
             <div class="step-no">04</div>
             <h3>Gobierno continuo</h3>
-            <p>Comité periódico, reporte ejecutivo, evidencia actualizada y roadmap vivo. Meridio y su ecosistema responden por el resultado, no solo por la ejecución.</p>
+            <p>Comité periódio, reporte ejecutivo, evidencia actualizada y hoja de ruta vigente. Meridio responde por el servicio completo, no solo una parte.</p>
           </article>
         </div>
         <blockquote class="pullquote" style="margin-top: 24px;">Usted decide el ritmo. Nosotros respondemos por el resultado.</blockquote>
       </div>
     </section>
 
-    <!-- QUÉ HACEMOS / CUATRO CAPACIDADES -->
-    <section class="section section-white target-section" id="pilares">
+    <!-- 04. LEYES Y MARCOS DE CONTROL -->
+    <section class="section method target-section" id="marcos">
       <div class="container">
         <div class="section-head">
-          <div class="eyebrow">Capacidades Estratégicas</div>
-          <h2>Cuatro pilares de control, un solo punto de encuentro.</h2>
-          <p class="section-intro">Consolidamos las cuatro disciplinas esenciales para la estabilidad del negocio moderno —modernización, ciberseguridad, cumplimiento y operación gestionada— dentro de una arquitectura institucional coherente, auditable y escalable para líderes de tecnología y riesgo.</p>
-        </div>
-        <div class="pillars-grid">
-          <!-- Pilar 1: Modernización -->
-          <article class="card pillar interactive-card">
-            <div class="kicker">PILAR 01 - MODERNIZACIÓN DE INFRAESTRUCTURA</div>
-            <h3>Evolución tecnológica controlada y predecible</h3>
-            <p>Planificamos, orquestamos y migramos sus cargas de trabajo hacia entornos híbridos y multinube bajo un esquema de gobernanza financiera (FinOps) y sin impacto en la continuidad operativa del negocio.</p>
-            <div class="services-list">
-              <a href="./soluciones.html" class="service-link">M365</a>
-              <span class="sep">·</span>
-              <a href="./soluciones.html" class="service-link">Azure</a>
-              <span class="sep">·</span>
-              <a href="./soluciones.html" class="service-link">AWS</a>
-              <span class="sep">·</span>
-              <a href="./soluciones.html" class="service-link">Google Cloud</a>
-              <span class="sep">·</span>
-              <a href="./soluciones.html" class="service-link">MultiCloud</a>
-              <span class="sep">·</span>
-              <a href="./soluciones.html" class="service-link">VMware</a>
-              <span class="sep">·</span>
-              <a href="./soluciones.html" class="service-link">Proxmox</a>
-            </div>
-          </article>
-
-          <!-- Pilar 2: Ciberseguridad -->
-          <article class="card pillar interactive-card">
-            <div class="kicker">PILAR 02 - CIBERSEGURIDAD DEFENSIVA</div>
-            <h3>Protección de activos críticos y mitigación activa del riesgo</h3>
-            <p>Implementamos arquitecturas Zero Trust, detección avanzada mediante SOC/SIEM y esquemas de resiliencia inmutables que salvaguardan la información corporativa y aseguran trazabilidad ante cualquier incidente.</p>
-            <div class="services-list">
-              <a href="./soluciones.html" class="service-link">Zero Trust</a>
-              <span class="sep">·</span>
-              <a href="./soluciones.html" class="service-link">Protección de Identidad y Correo</a>
-              <span class="sep">·</span>
-              <a href="./soluciones.html" class="service-link">Monitoreo SIEM/SOAR y CSOC</a>
-            </div>
-          </article>
-
-          <!-- Pilar 3: Operación -->
-          <article class="card pillar interactive-card">
-            <div class="kicker">PILAR 03 - OPERACIÓN CRÍTICA Y SERVICIOS GESTIONADOS</div>
-            <h3>Continuidad operativa permanente bajo un único SLA</h3>
-            <p>Proveemos monitoreo 24/7, soporte especializado de segundo y tercer nivel, asegurando control y continuidad sin sobredimensionar la plantilla interna; la idea es seguir operando después de un ataque o una falla.</p>
-            <div class="services-list">
-              <a href="./soluciones.html" class="service-link">Respaldo inmutable</a>
-              <span class="sep">·</span>
-              <a href="./soluciones.html" class="service-link">Recuperación ante desastres</a>
-              <span class="sep">·</span>
-              <a href="./soluciones.html" class="service-link">Continuidad operativa</a>
-            </div>
-          </article>
-
-          <!-- Pilar 4: Cumplimiento -->
-          <article class="card pillar interactive-card">
-            <div class="kicker">PILAR 04 - CUMPLIMIENTO REGULATORIO Y PRIVACIDAD</div>
-            <h3>Transformación de exigencias legales en evidencias técnicas</h3>
-            <p>Traducimos los mandatos de las Leyes 21.719 y 21.663 en políticas de seguridad, registros de tratamiento y controles auditables listos para ser sustentados con solvencia ante el regulador o auditorías externas.</p>
-            <div class="services-list">
-              <a href="./soluciones.html" class="service-link">Ley 21.719</a>
-              <span class="sep">·</span>
-              <a href="./soluciones.html" class="service-link">Ley 21.663</a>
-              <span class="sep">·</span>
-              <a href="./soluciones.html" class="service-link">Portal RAT</a>
-              <span class="sep">·</span>
-              <a href="./soluciones.html" class="service-link">Purview</a>
-              <span class="sep">·</span>
-              <a href="./soluciones.html" class="service-link">CISO Virtual</a>
-              <span class="sep">·</span>
-              <a href="./soluciones.html" class="service-link">DPO/DPD</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- LEYES Y MARCOS DE CONTROL -->
-    <section class="section section-white target-section" id="marcos">
-      <div class="container">
-        <div class="section-head">
-          <div class="eyebrow">LEYES Y MARCOS DE CONTROL</div>
-          <h2>Convergencia de seguridad, tecnología, privacidad y cumplimiento.</h2>
-          <p class="section-intro">Alineamos la arquitectura corporativa con los estándares internacionales más rigurosos y el marco legislativo chileno vigente, asegurando una postura de seguridad defensiva, trazabilidad documental y mejora continua frente a escrutinios regulatorios.</p>
+          <div class="eyebrow">LEYES Y MARCOS</div>
+          <h2>Lo que la ley exige y lo que el mercado recomienda.</h2>
+          <p class="section-intro">Trabajamos alineados a las leyes chilenas y a los estándares internacionales que usan las organizaciones más exigentes; Meridio no certifica, preparamos su organización para que cumpla y para que un auditor acreditado pueda certificarla cuando corresponda.</p>
         </div>
         <div class="frameworks">
-          <div class="framework interactive-card"><span class="f-mark">ISO</span><div><strong>ISO/IEC 27001:2022</strong><span>Preparamos la evidencia que le pedirá un auditor o un cliente grande.</span></div></div>
-          <div class="framework interactive-card"><span class="f-mark">CIS</span><div><strong>CIS Controls v8</strong><span>Ordenamos las medidas por grupo de implementación según el tamaño de su empresa.</span></div></div>
-          <div class="framework interactive-card"><span class="f-mark">NIST</span><div><strong>NIST CSF 2.0</strong><span>Medimos su madurez actual y la meta a 12 meses.</span></div></div>
-          <div class="framework interactive-card"><span class="f-mark">ZT</span><div><strong>Zero Trust</strong><span>Ningún acceso es confiable por defecto; lo aplicamos primero a identidad y correo.</span></div></div>
+          <div class="framework interactive-card"><span class="f-mark">ISO</span><div><strong>ISO/IEC 27001:2022</strong><span>Estándar internacional para gestionar la seguridad de la información.</span></div></div>
+          <div class="framework interactive-card"><span class="f-mark">CIS</span><div><strong>CIS Controls v8</strong><span>Controles de seguridad priorizados, según el tamaño y madurez de la organización.</span></div></div>
+          <div class="framework interactive-card"><span class="f-mark">NIST</span><div><strong>NIST CSF 2.0</strong><span>Marco para gesionar el riesgo de ciberseguridad, desde el gobierno hasta la recuperación.</span></div></div>
+          <div class="framework interactive-card"><span class="f-mark">ZT</span><div><strong>Zero Trust</strong><span>Modelo de acceso que no confía en nadie por defecto: toda persona y dispositivo se verifica siempre.</span></div></div>
         </div>
         <div class="law-grid">
           <!-- LEY 21.719 -->
@@ -299,16 +325,16 @@
               <h3>Protección de datos personales</h3>
               <div class="law-flow">
                 <div class="flow-block">
-                  <span class="flow-tag">A QUIÉN OBLIGA</span>
-                  <p class="flow-bajada">A toda empresa que trate datos personales. Vigente desde diciembre 2027.</p>
+                  <span class="flow-tag">QUE REGULA</span>
+                  <p class="flow-bajada">Cómo las organizaciones tratan los datos de las personas, y crea la Agencia de Protección de Datos Personales. Las sanciones llegan hasta 20.000 UTM según la gravedad.</p>
                 </div>
                 <div class="flow-block">
-                  <span class="flow-tag">QUÉ EXIGE</span>
-                  <p class="flow-bajada">Saber qué datos trata, por qué, con qué base legal y poder demostrarlo. Multas de hasta 20.000 UTM.</p>
+                  <span class="flow-tag">VIGENCIA</span>
+                  <p class="flow-bajada">Hay un proyecto de postergación al 15 de Octubre del 2027 en tramitación; mientras no se publique, rige el 1 de Diciembre de 2026. Las obligaciones no cambian solo el plazo.</p>
                 </div>
                 <div class="flow-block solution">
                   <span class="flow-tag">QUÉ HACE MERIDIO</span>
-                  <p class="flow-bajada">Mapa de datos, Portal RAT, evidencia de controles. El DPO es recomendado y Meridio puede ejercerlo como servicio.</p>
+                  <p class="flow-bajada">Mapa de datos, registro de actividades de tratamiento y evidencia de controles.</p>
                 </div>
               </div>
             </div>
@@ -318,19 +344,19 @@
           <article class="law-card interactive-card">
             <div class="law-no">21.663</div>
             <div>
-              <h3>Marco de ciberseguridad y resiliencia</h3>
+              <h3>Marco de Ciberseguridad</h3>
               <div class="law-flow">
                 <div class="flow-block">
-                  <span class="flow-tag">A QUIÉN OBLIGA</span>
-                  <p class="flow-bajada">A servicios esenciales y operadores de importancia vital. Si su empresa no lo es, es el estándar que le exigirán clientes y reguladores.</p>
+                  <span class="flow-tag">QUE REGULA</span>
+                  <p class="flow-bajada">Obligaciones de Ciberseguridad para servicios esenciales y operadores de importancia vital. Si presta esos servicios o trabaja para quienes los prestan, la ley le aplica o le llega a través de las exigencias de sus clientes.</p>
                 </div>
                 <div class="flow-block">
-                  <span class="flow-tag">QUÉ EXIGE</span>
-                  <p class="flow-bajada">Gestión de riesgos, reporte de incidentes a la ANCI y delegado de ciberseguridad en los operadores de importancia vital.</p>
+                  <span class="flow-tag">VIGENCIA</span>
+                  <p class="flow-bajada">Vigente desde el 2025. La obligación de reportar incidentes de ciberseguridad rige desde el 1 de Marzo de 2025.</p>
                 </div>
                 <div class="flow-block solution">
                   <span class="flow-tag">QUÉ HACE MERIDIO</span>
-                  <p class="flow-bajada">Brechas frente a la ley, plan de adecuación, CISO virtual y delegado como servicio.</p>
+                  <p class="flow-bajada">Revisión de aplicabilidad, brechas de ciberseguridad y preparación para el reporte de incidentes.</p>
                 </div>
               </div>
             </div>
@@ -343,64 +369,168 @@
       </div>
     </section>
 
-    <!-- EL SIGUIENTE PASO / DIAGNÓSTICO EJECUTIVO -->
-    <section class="section offer target-section" id="contacto">
-      <div class="container offer-grid">
-        <div class="offer-copy">
-          <div class="eyebrow">Diagnóstico Ejecutivo</div>
-          <h2>Conozca la postura de riesgo real de su organización.</h2>
-          <p>Antes de comprometer presupuesto en soluciones aisladas, Meridio le entrega una visión objetiva e independiente de su infraestructura: brechas de seguridad críticas, nivel de apego normativo y un plan de acción a 30, 60 y 90 días ejecutado por especialistas y respaldado bajo nuestro modelo de gobernanza.</p>
-          <ul class="check-list">
-            <li><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg><span>Gobernanza de Identidad: MFA contextual, Acceso Condicional y control de privilegios mínimos.</span></li>
-            <li><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg><span>Seguridad en Endpoints: Estado de cumplimiento en estaciones de trabajo, hardening y postura EDR.</span></li>
-            <li><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg><span>Exposición de Amenazas: Cobertura de detección frente a vectores de ransomware y ataques dirigidos.</span></li>
-            <li><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg><span>Protección de Datos: Inventario preliminar, clasificación de información confidencial y prevención de fuga (DLP).</span></li>
-          </ul>
+    <!-- 05. POR QUÉ MERIDIO -->
+    <section class="section section-white target-section" id="porque">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">POR QUÉ MERIDIO</div>
+          <h2>Un solo responsable, con una trayectoria que respalda.</h2>
+        </div>
+        <div class="steps">
+          <article class="card step interactive-card">
+            <div class="num">01</div>
+            <h3>Un solo responsable</h3>
+            <p>Usted firma un contrato con Meridio. Nosotros coordinamos a los especialistas y respondemos ante usted por el servicio completo.</p>
+          </article>
+          <article class="card step interactive-card">
+            <div class="num">02</div>
+            <h3>Trayectoria</h3>
+            <p>Quienes dirigen Meridio vienen de banca, telecomunicaciones, datacenter y sector público: entornos donde una caída cuesta dinero y reputación.</p>
+          </article>
+          <article class="card step interactive-card">
+            <div class="num">03</div>
+            <h3>Cobertura nacional</h3>
+            <p>Atendemos a todo Chile. Gestionamos de forma remota y, cuando el servicio lo requiere, contamos con apoyo presencial en regiones.</p>
+          </article>
+          <article class="card step interactive-card">
+            <div class="num">04</div>
+            <h3>Qué significa Meridio</h3>
+            <p>Un meridiano es la línea de referencia que marca el norte. Esa es la idea: ser el punto de referencia al que su organización recurre cuando necesita saber quién responde.</p>
+          </article>
+        </div>
+        <blockquote class="pullquote" style="margin-top: 28px; margin-bottom: 0;">La gobernanza no se delega a un proveedor. Se delega a un responsable. En Meridio, somos ese responsable.</blockquote>
+      </div>
+    </section>
 
-          <div class="offer-badges">
-            <div class="badge-item">
-              <strong>5 días hábiles</strong>
-              <span>Modalidad remota</span>
-            </div>
-            <div class="badge-item">
-              <strong>Perfil lectura</strong>
-              <span>Cero fricción operativa</span>
-            </div>
-            <div class="badge-item">
-              <strong>Sin costo inicial</strong>
-              <span>Entregable ejecutivo formal</span>
-            </div>
+    <!-- 06. DIAGNÓSTICO EJECUTIVO / FORMULARIO CON CLOUDFLARE -->
+    <section class="section offer target-section" id="contacto">
+      <div class="container offer-form-grid">
+        <div class="offer-copy">
+          <div class="eyebrow">DIAGNÓSTICO EJECUTIVO</div>
+          <h2>Solicite su diagnóstico ejecutivo.</h2>
+          <p>Un informe claro sobre sus riesgos, quién responde hoy por ellos y qué evidencia puede demostrar. Sin costo y sin compromiso.</p>
+
+          <div class="offer-block-group">
+            <div class="offer-subhead">QUÉ RECIBE</div>
+            <ul class="check-list compact-check-list">
+              <li><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg><span>Mapa de riesgos priorizado.</span></li>
+              <li><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg><span>Nivel de preparación frente a la Ley 21.719 y la Ley 21.663.</span></li>
+              <li><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg><span>Primeros pasos recomendados, con orden y prioridad.</span></li>
+            </ul>
+          </div>
+
+          <div class="offer-block-group">
+            <div class="offer-subhead">QUÉ NO HACEMOS</div>
+            <p class="offer-small-text">No instalamos nada ni modificamos su configuración. Trabajamos con acceso de solo lectura que usted autoriza y puede revocar. Firmamos acuerdo de confidencialidad si lo requiere.</p>
+          </div>
+
+          <div class="offer-block-group">
+            <div class="offer-subhead">QUÉ PASA DESPUÉS DE ENVIAR</div>
+            <ol class="numbered-steps-list">
+              <li><span class="step-badge">1</span><span>Le contactamos en 1 día hábil.</span></li>
+              <li><span class="step-badge">2</span><span>Acordamos alcance y accesos en una llamada de 30 minutos.</span></li>
+              <li><span class="step-badge">3</span><span>Le entregamos el informe en 5 días hábiles.</span></li>
+              <li><span class="step-badge">4</span><span>Se lo presentamos en una reunión breve.</span></li>
+            </ol>
           </div>
         </div>
 
-        <!-- TARJETA EJECUTIVA DE CONTACTO DIRECTO -->
-        <aside class="assessment-card direct-contact-card">
-          <span class="direct-badge">CONTACTO DIRECTO</span>
-          <div class="card-inner-content">
-            <div class="card-eyebrow">EVALUACIÓN ESTRATÉGICA</div>
-            <h3 class="card-title">Solicitar Assessment Ejecutivo</h3>
-            <p class="card-desc">
-              Escríbanos directamente y coordinamos una sesión inicial sin costo.<br>
-              Respondemos en un plazo máximo de 1 día hábil.
-            </p>
+        <!-- TARJETA FORMULARIO DE DIAGNÓSTICO -->
+        <aside class="form-card-wrapper">
+          <span class="direct-badge">SIN COSTO</span>
+          <div class="form-card-header">
+            <h3>Solicite su diagnóstico</h3>
+            <p>Complete el formulario y le contactamos en 1 día hábil.</p>
+          </div>
 
-            <a class="btn btn-direct-cta" href="mailto:csoc@meridio.cl?subject=Solicitud%20Assessment%20Ejecutivo%20Meridio">
-              ESCRIBIR A CSOC@MERIDIO.CL ↗
-            </a>
-
-            <div class="card-divider"></div>
-
-            <div class="card-footer-info">
-              <strong>¿Prefiere una conversación directa?</strong>
-              <div class="footer-links-row">
-                <a href="mailto:contacto@meridio.cl">contacto@meridio.cl</a>
-                <span class="sep">·</span>
-                <a href="https://www.linkedin.com/company/meridio" target="_blank" rel="noopener">LinkedIn Meridio</a>
-                <span class="sep">·</span>
-                <span>Santiago de Chile.</span>
+          <form class="diagnostic-form" id="diagnosticForm" action="#" method="POST">
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="nombre">Nombre <span class="req">*</span></label>
+                <input type="text" id="nombre" name="nombre" required>
+              </div>
+              <div class="form-group">
+                <label for="cargo">Cargo <span class="req">*</span></label>
+                <input type="text" id="cargo" name="cargo" required>
               </div>
             </div>
-          </div>
+
+            <div class="form-group">
+              <label for="empresa">Empresa <span class="req">*</span></label>
+              <input type="text" id="empresa" name="empresa" required>
+            </div>
+
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="correo">Correo corporativo <span class="req">*</span></label>
+                <input type="email" id="correo" name="correo" required>
+              </div>
+              <div class="form-group">
+                <label for="telefono">Teléfono (opcional)</label>
+                <input type="tel" id="telefono" name="telefono">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="tamano">Tamaño de la organización <span class="req">*</span></label>
+              <select id="tamano" name="tamano" required>
+                <option value="" disabled selected>Seleccione</option>
+                <option value="1-50">1 a 50 colaboradores</option>
+                <option value="51-200">51 a 200 colaboradores</option>
+                <option value="201-500">201 a 500 colaboradores</option>
+                <option value="500+">Más de 500 colaboradores</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="group-label">¿Qué le preocupa más?</label>
+              <div class="checkbox-grid">
+                <label class="checkbox-item">
+                  <input type="checkbox" name="preocupacion" value="exchange">
+                  <span>Correo Exchange antiguo</span>
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="preocupacion" value="ransomware">
+                  <span>Ransomware y respaldo</span>
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="preocupacion" value="incidentes">
+                  <span>Incidentes sin responsable</span>
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="preocupacion" value="leyes">
+                  <span>Ley 21.719 / 21.663</span>
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="preocupacion" value="otro">
+                  <span>Otro</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="comentario">Comentario (opcional)</label>
+              <textarea id="comentario" name="comentario" rows="2"></textarea>
+            </div>
+
+            <!-- VERIFICACIÓN CLOUDFLARE TURNSTILE -->
+            <div class="cf-verification-box">
+              <div class="cf-turnstile" data-sitekey="1x00000000000000000000AA" data-theme="light"></div>
+            </div>
+
+            <button type="submit" class="btn btn-direct-cta form-submit-btn">Solicitar diagnóstico gratuito</button>
+
+            <p class="form-privacy-note">
+              Usaremos sus datos solo para responder esta solicitud. Más información en nuestra <a href="./politica-privacidad.html">Política de Privacidad</a>.
+            </p>
+
+            <div class="form-alt-contact">
+              <span>¿Prefiere escribirnos?</span>
+              <a href="https://wa.me/56951159279" target="_blank" rel="noopener">WhatsApp</a>
+              <span class="sep">·</span>
+              <a href="mailto:contacto@meridio.cl">contacto@meridio.cl</a>
+            </div>
+          </form>
         </aside>
       </div>
     </section>
@@ -414,37 +544,38 @@
             <img class="brand-logo footer-logo" src="./assets/logo.png" alt="Meridio" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
             <span class="brand-text" style="display: none; color: #fff;">Merid<span class="brand-i">i</span>o</span>
           </a>
-          <p>Un solo responsable para orquestar tecnología, seguridad y cumplimiento en sectores de alta criticidad.</p>
+          <p>Tecnología, seguridad y cumplimiento, bajo un solo responsable.</p>
         </div>
         <div class="footer-col">
           <h4>Soluciones</h4>
-          <a href="./soluciones.html">1. Modernización e Infraestructura</a>
-          <a href="./soluciones.html">2. Ciberseguridad Defensiva</a>
-          <a href="./soluciones.html">3. Continuidad y Respaldo</a>
-          <a href="./soluciones.html">4. Cumplimiento y Operación</a>
+          <a href="./soluciones.html"> Infraestructura</a>
+          <a href="./soluciones.html"> Ciberseguridad </a>
+          <a href="./soluciones.html"> Operación</a>
+          <a href="./soluciones.html"> Cumplimiento</a>
         </div>
         <div class="footer-col">
-          <h4>Ecosistema</h4>
-          <a href="./index.html#metodo">Modelo de servicio</a>
-          <a href="./index.html#metodo">Gobernanza y SLA</a>
-          <a href="#contacto">Cobertura regional</a>
+          <h4>Compañia</h4>
+          <a href="./index.html#metodo">Problema</a>
+          <a href="./index.html#metodo">Cómo trabajamos</a>
+          <a href="#contacto">Leyes y marcos</a>
         </div>
         <div class="footer-col">
           <h4>Marco Legal</h4>
-          <a href="#marcos">Ley 21.719 (Datos)</a>
-          <a href="#marcos">Ley 21.663 (Ciberseguridad)</a>
+          <a href="#marcos">Ley 21.719</a>
+          <a href="#marcos">Ley 21.663</a>
           <a href="./politica-privacidad.html">Política de Privacidad</a>
         </div>
         <div class="footer-col">
-          <h4>Compañía</h4>
+          <h4>Contacto</h4>
           <span class="footer-info">Santiago de Chile, operación continua</span>
           <a href="mailto:contacto@meridio.cl" class="footer-contact-link">contacto@meridio.cl</a>
           <a href="tel:+56951159279" class="footer-contact-link">+56 9 5115 9279</a>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© <span id="year"></span> Meridio SpA. Todos los derechos reservados.</span>
-        <span>Gobernanza tecnológica y de ciberseguridad con responsabilidad | Chile</span>
+        <span>© <span id="year"></span> Meridio SpA · RUT 78.550.549-2 · Santiago, Chile</span>
+        <span>Meridio es una empresa relacionada con Sopnet.</span>
+        <span>La información de este sitio es de carácter general y no constituye asesoría legal.</span>
       </div>
     </div>
   </footer>

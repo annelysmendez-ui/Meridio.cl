@@ -34,40 +34,91 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 4. Filtrado por pilares
+  // 4. Filtrado combinado por pilares y buscador de servicios
   const filterButtons = document.querySelectorAll('.pillar-btn');
   const pillarSections = document.querySelectorAll('[data-pillar-section]');
   const solutionCards = document.querySelectorAll('.solution-card');
+  const searchInput = document.getElementById('svcSearch');
+  const emptyState = document.getElementById('svcEmpty');
+
+  let activePillar = 'all';
+  let searchQuery = '';
+
+  const normalizeText = (str) =>
+    (str || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim();
+
+  const applyCatalogFilters = () => {
+    let totalVisible = 0;
+
+    solutionCards.forEach(card => {
+      const cardPillar = card.dataset.pillar || '';
+      const searchable = normalizeText(
+        (card.dataset.search || '') + ' ' + (card.textContent || '')
+      );
+
+      const matchesPillar = activePillar === 'all' || cardPillar === activePillar;
+      const matchesSearch = !searchQuery || searchable.includes(searchQuery);
+
+      if (matchesPillar && matchesSearch) {
+        card.style.display = '';
+        totalVisible++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    pillarSections.forEach(sec => {
+      const secPillar = sec.dataset.pillarSection;
+      const visibleInSec = Array.from(sec.querySelectorAll('.solution-card')).some(
+        c => c.style.display !== 'none'
+      );
+
+      if ((activePillar === 'all' || secPillar === activePillar) && visibleInSec) {
+        sec.style.display = '';
+      } else {
+        sec.style.display = 'none';
+      }
+    });
+
+    if (emptyState) {
+      emptyState.hidden = totalVisible > 0;
+    }
+  };
 
   filterButtons.forEach(btn => {
     btn.addEventListener('click', () => {
       filterButtons.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
+      activePillar = btn.dataset.pillar || 'all';
 
-      const pillar = btn.dataset.pillar;
-
-      if (pillar === 'all') {
-        pillarSections.forEach(sec => sec.style.display = '');
-        solutionCards.forEach(card => card.style.display = '');
-      } else {
-        pillarSections.forEach(sec => {
-          if (sec.dataset.pillarSection === pillar) {
-            sec.style.display = '';
-          } else {
-            sec.style.display = 'none';
-          }
-        });
-
-        solutionCards.forEach(card => {
-          if (card.dataset.pillar === pillar) {
-            card.style.display = '';
-          } else {
-            card.style.display = 'none';
-          }
-        });
+      // Al presionar un botón de filtro, limpia el buscador automáticamente
+      if (searchInput && searchInput.value !== '') {
+        searchInput.value = '';
+        searchQuery = '';
       }
+
+      applyCatalogFilters();
     });
   });
+
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      searchQuery = normalizeText(e.target.value);
+      applyCatalogFilters();
+    });
+  }
+
+  // Soporte para parámetro ?pilar= en la URL (ej. desde enlaces del footer)
+  if (filterButtons.length > 0) {
+    const urlParams = new URLSearchParams(window.location.search);
+    const initialPillar = urlParams.get('pilar');
+    if (initialPillar) {
+      const targetBtn = Array.from(filterButtons).find(b => b.dataset.pillar === initialPillar);
+      if (targetBtn) {
+        targetBtn.click();
+      }
+    }
+  }
 
   // 5. Modales de Fichas Técnicas
   const modalTriggers = document.querySelectorAll('.btn-ficha-trigger');
@@ -96,13 +147,11 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   modalBackdrops.forEach(modal => {
-    // Cerrar con botón X o botón Cerrar
     const closeBtns = modal.querySelectorAll('.ficha-modal-close-btn, .btn-cerrar-ficha');
     closeBtns.forEach(btn => {
       btn.addEventListener('click', () => closeModal(modal));
     });
 
-    // Cerrar al hacer clic fuera de la caja
     modal.addEventListener('click', (e) => {
       if (e.target === modal) {
         closeModal(modal);
@@ -110,11 +159,76 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Cerrar con Escape
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
       const activeModal = document.querySelector('.ficha-modal-backdrop.open');
       if (activeModal) closeModal(activeModal);
     }
   });
+
+  // 6. Formulario de Diagnóstico Ejecutivo con Cloudflare Turnstile
+  const diagnosticForm = document.getElementById('diagnosticForm');
+  if (diagnosticForm) {
+    diagnosticForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const submitBtn = diagnosticForm.querySelector('.form-submit-btn');
+      const originalText = submitBtn ? submitBtn.textContent : 'Solicitar diagnóstico gratuito';
+      
+      // Validar token de Cloudflare Turnstile si el widget está activo
+      const cfResponse = diagnosticForm.querySelector('[name="cf-turnstile-response"]');
+      if (cfResponse && !cfResponse.value) {
+        alert('Por favor, complete la verificación de seguridad de Cloudflare antes de enviar.');
+        return;
+      }
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Enviando solicitud...';
+      }
+
+      const nombre = document.getElementById('nombre')?.value || '';
+      const cargo = document.getElementById('cargo')?.value || '';
+      const empresa = document.getElementById('empresa')?.value || '';
+      const correo = document.getElementById('correo')?.value || '';
+      const telefono = document.getElementById('telefono')?.value || '';
+      const tamano = document.getElementById('tamano')?.value || '';
+      const comentario = document.getElementById('comentario')?.value || '';
+      const preocupaciones = Array.from(diagnosticForm.querySelectorAll('input[name="preocupacion"]:checked'))
+        .map(cb => cb.nextElementSibling?.textContent?.trim() || cb.value)
+        .join(', ');
+
+      setTimeout(() => {
+        const subject = encodeURIComponent(`Solicitud Diagnóstico Ejecutivo — ${empresa}`);
+        const body = encodeURIComponent(
+          `Nombre: ${nombre}\n` +
+          `Cargo: ${cargo}\n` +
+          `Empresa: ${empresa}\n` +
+          `Correo: ${correo}\n` +
+          `Teléfono: ${telefono || 'No especificado'}\n` +
+          `Tamaño organización: ${tamano}\n` +
+          `Preocupaciones principales: ${preocupaciones || 'No especificadas'}\n` +
+          `Comentario: ${comentario || 'Sin comentarios adicionales'}`
+        );
+
+        if (submitBtn) {
+          submitBtn.textContent = '¡Solicitud registrada con éxito!';
+          submitBtn.style.background = '#059669';
+        }
+
+        window.location.href = `mailto:csoc@meridio.cl?subject=${subject}&body=${body}`;
+        
+        setTimeout(() => {
+          diagnosticForm.reset();
+          if (window.turnstile) {
+            window.turnstile.reset();
+          }
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalText;
+            submitBtn.style.background = '';
+          }
+        }, 3000);
+      }, 400);
+    });
+  }
 });
